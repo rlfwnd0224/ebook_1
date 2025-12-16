@@ -6,6 +6,9 @@
     <title>📖 동화책 읽기</title>
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- 모바일 디버깅용 Eruda 콘솔 -->
+    <script src="https://cdn.jsdelivr.net/npm/eruda@3.0.1/eruda.min.js"></script>
+    <script>eruda.init();</script>
 </head>
 <body>
     <div class="container">
@@ -71,11 +74,18 @@
     <script>
         let currentStory = null;
         let currentPageIndex = 0;
-        let synthesis = window.speechSynthesis;
+        let synthesis = null;
         let currentUtterance = null;
         let isAutoPlay = false;
         let currentSpeed = 1.0;
         let ttsControlsExpanded = true;
+
+        // 안전하게 speechSynthesis 초기화
+        try {
+            synthesis = window.speechSynthesis || null;
+        } catch (e) {
+            console.warn('⚠️ TTS 사용 불가:', e);
+        }
 
         // TTS 컨트롤 토글
         function toggleTTSControls() {
@@ -230,6 +240,11 @@
 
         // TTS 재생
         function playTTS() {
+            if (!synthesis) {
+                console.warn('⚠️ TTS 사용 불가');
+                return;
+            }
+            
             if (!currentStory || !currentStory.pages[currentPageIndex]) return;
 
             stopTTS();
@@ -269,6 +284,8 @@
 
         // TTS 일시정지
         function pauseTTS() {
+            if (!synthesis) return;
+            
             if (synthesis.speaking) {
                 synthesis.pause();
                 document.getElementById('playBtn').style.display = 'block';
@@ -278,6 +295,8 @@
 
         // TTS 정지
         function stopTTS() {
+            if (!synthesis) return;
+            
             synthesis.cancel();
             document.getElementById('playBtn').style.display = 'block';
             document.getElementById('pauseBtn').style.display = 'none';
@@ -314,7 +333,7 @@
                 nextPage();
             } else if (e.key === ' ') {
                 e.preventDefault();
-                if (synthesis.speaking && !synthesis.paused) {
+                if (synthesis && synthesis.speaking && !synthesis.paused) {
                     pauseTTS();
                 } else {
                     playTTS();
@@ -322,9 +341,11 @@
             }
         });
 
-        // 음성 로드 대기
-        if (synthesis.onvoiceschanged !== undefined) {
-            synthesis.onvoiceschanged = () => {};
+        // 음성 로드 대기 (안전하게)
+        if (synthesis && synthesis.onvoiceschanged !== undefined) {
+            synthesis.onvoiceschanged = () => {
+                console.log('✅ TTS 음성 로드 완료');
+            };
         }
 
         // 초기 로드
