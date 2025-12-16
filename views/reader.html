@@ -22,7 +22,8 @@
                     class="reader-image" 
                     src="" 
                     alt="동화책 이미지"
-                    onerror="this.src='https://via.placeholder.com/800x600?text=Image+Not+Found'"
+                    style="transition: opacity 0.3s ease;"
+                    onerror="handleImageError(this)"
                 >
                 <div id="pageText" class="reader-text">
                     동화책을 불러오는 중...
@@ -71,6 +72,13 @@
         let isAutoPlay = false;
         let currentSpeed = 1.0;
 
+        // 이미지 로드 오류 처리 - SVG placeholder 생성
+        function handleImageError(img) {
+            const svg = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Crect fill='%23f5f5f5' width='800' height='600'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='24' fill='%23999'%3E이미지를 불러올 수 없습니다%3C/text%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16' fill='%23bbb'%3E관리자 페이지에서 이미지 URL을 확인해주세요%3C/text%3E%3C/svg%3E`;
+            img.src = svg;
+            img.onerror = null; // 무한 루프 방지
+        }
+
         // 동화책 로드
         async function loadStory() {
             const storyId = window.location.pathname.split('/').pop();
@@ -99,8 +107,43 @@
 
             const page = currentStory.pages[index];
             
-            document.getElementById('pageImage').src = page.imageUrl;
-            document.getElementById('pageText').textContent = page.text;
+            // 이미지 로딩 처리
+            const imgElement = document.getElementById('pageImage');
+            imgElement.style.opacity = '0.5';
+            
+            // 이미지 URL 유효성 검사 및 로딩
+            if (page.imageUrl && page.imageUrl.trim() && page.imageUrl !== '') {
+                imgElement.src = page.imageUrl;
+                
+                // 이미지 로드 성공
+                imgElement.onload = function() {
+                    imgElement.style.opacity = '1';
+                };
+                
+                // 이미지 로드 실패
+                imgElement.onerror = function() {
+                    console.error('이미지 로드 실패:', page.imageUrl);
+                    imgElement.src = 'https://via.placeholder.com/800x600/FFE5F1/FF6B9D?text=' + 
+                                    encodeURIComponent('이미지를 불러올 수 없습니다 😢');
+                    imgElement.style.opacity = '1';
+                };
+            } else {
+                // URL이 없는 경우
+                imgElement.src = 'https://via.placeholder.com/800x600/E3F2FD/1976D2?text=' + 
+                                encodeURIComponent('이미지가 없습니다');
+                imgElement.style.opacity = '1';
+            }
+            
+            // 텍스트 표시
+            const textElement = document.getElementById('pageText');
+            if (page.text && page.text.trim()) {
+                textElement.textContent = page.text;
+                textElement.style.color = '#2c3e50';
+            } else {
+                textElement.textContent = '(텍스트가 없습니다)';
+                textElement.style.color = '#999';
+            }
+            
             document.getElementById('currentPage').textContent = index + 1;
 
             // 버튼 상태 업데이트
@@ -115,7 +158,7 @@
             stopTTS();
 
             // 자동 재생이 켜져있으면 자동으로 읽기
-            if (isAutoPlay) {
+            if (isAutoPlay && page.text && page.text.trim()) {
                 setTimeout(() => playTTS(), 500);
             }
         }
