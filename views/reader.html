@@ -45,20 +45,25 @@
         </div>
 
         <!-- TTS 컨트롤 -->
-        <div class="tts-controls">
-            <button class="tts-btn" id="playBtn" onclick="playTTS()" title="읽어주기">
-                🔊
+        <div class="tts-controls" id="ttsControls">
+            <button class="tts-toggle" onclick="toggleTTSControls()" title="TTS 컨트롤">
+                🎵
             </button>
-            <button class="tts-btn" id="pauseBtn" onclick="pauseTTS()" title="일시정지" style="display: none;">
-                ⏸️
-            </button>
-            <button class="tts-btn" onclick="stopTTS()" title="정지">
-                ⏹️
-            </button>
-            <div class="speed-control">
-                <button class="speed-btn" onclick="setSpeed(0.8)" data-speed="0.8">🐢 느림</button>
-                <button class="speed-btn active" onclick="setSpeed(1.0)" data-speed="1.0">🐰 보통</button>
-                <button class="speed-btn" onclick="setSpeed(1.3)" data-speed="1.3">🐆 빠름</button>
+            <div class="tts-content">
+                <button class="tts-btn" id="playBtn" onclick="playTTS()" title="읽어주기">
+                    🔊
+                </button>
+                <button class="tts-btn" id="pauseBtn" onclick="pauseTTS()" title="일시정지" style="display: none;">
+                    ⏸️
+                </button>
+                <button class="tts-btn" onclick="stopTTS()" title="정지">
+                    ⏹️
+                </button>
+                <div class="speed-control">
+                    <button class="speed-btn" onclick="setSpeed(0.8)" data-speed="0.8">🐢 느림</button>
+                    <button class="speed-btn active" onclick="setSpeed(1.0)" data-speed="1.0">🐰 보통</button>
+                    <button class="speed-btn" onclick="setSpeed(1.3)" data-speed="1.3">🐆 빠름</button>
+                </div>
             </div>
         </div>
     </div>
@@ -70,6 +75,19 @@
         let currentUtterance = null;
         let isAutoPlay = false;
         let currentSpeed = 1.0;
+        let ttsControlsExpanded = true;
+
+        // TTS 컨트롤 토글
+        function toggleTTSControls() {
+            const controls = document.getElementById('ttsControls');
+            ttsControlsExpanded = !ttsControlsExpanded;
+            
+            if (ttsControlsExpanded) {
+                controls.classList.remove('collapsed');
+            } else {
+                controls.classList.add('collapsed');
+            }
+        }
 
         // 이미지 로드 오류 처리 - SVG placeholder 생성
         function handleImageError(img) {

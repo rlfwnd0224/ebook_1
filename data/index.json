@@ -14,7 +14,39 @@
       "isPublished": true,
       "createdAt": "2025-12-16",
       "updatedAt": "2025-12-16"
+    },
+    {
+      "id": "story-002",
+      "title": "신데렐라",
+      "author": "샤를 페로",
+      "coverImageUrl": "https://i.ibb.co/tPvHLGjR/0.png",
+      "ageGroup": "5-7세",
+      "tags": [
+        "인내심",
+        "희망",
+        "선한 마음"
+      ],
+      "pageCount": 20,
+      "isPublished": true,
+      "createdAt": "2025-12-16",
+      "updatedAt": "2025-12-16"
+    },
+    {
+      "id": "story-003",
+      "title": "잠자는 숲속의 공주",
+      "author": "샤를 페로",
+      "coverImageUrl": "https://i.ibb.co/zHLCHkTY/0.png",
+      "ageGroup": "5-7세",
+      "tags": [
+        "저주",
+        "사랑의 힘",
+        "인내"
+      ],
+      "pageCount": 20,
+      "isPublished": true,
+      "createdAt": "2025-12-16",
+      "updatedAt": "2025-12-16"
     }
   ],
-  "lastUpdated": "2025-12-16T07:15:00.465Z"
+  "lastUpdated": "2025-12-16T07:49:44.015Z"
 }

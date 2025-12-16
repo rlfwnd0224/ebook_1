@@ -1,0 +1,224 @@
+{
+  "id": "story-003",
+  "title": "잠자는 숲속의 공주",
+  "author": "샤를 페로",
+  "coverImageUrl": "https://i.ibb.co/zHLCHkTY/0.png",
+  "ageGroup": "5-7세",
+  "tags": [
+    "저주",
+    "사랑의 힘",
+    "인내"
+  ],
+  "pageCount": 20,
+  "isPublished": true,
+  "createdAt": "2025-12-16",
+  "updatedAt": "2025-12-16",
+  "description": "보티첼리 스타일.\n밝고 동화적, 부드러운 파스텔.",
+  "pages": [
+    {
+      "pageNumber": 1,
+      "imageUrl": "https://i.ibb.co/VpNTKzrG/1-1.png",
+      "text": "옛날 옛날, 아름다운 왕국에 예쁜 공주가 태어났어. 왕과 왕비는 너무너무 기뻐했지. \"드디어 우리 딸이 태어났구나!\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 2,
+      "imageUrl": "https://i.ibb.co/hxJVQjZq/1-2.png",
+      "text": "온 나라가 기쁨으로 가득했어. 왕과 왕비는 성대한 축하연을 열었어. 일곱 명의 착한 요정들도 초대받았단다.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 3,
+      "imageUrl": "https://i.ibb.co/hxhqBGHG/2-1.png",
+      "text": "요정들은 차례차례 공주에게 선물을 주었어. \"아름다움을 드립니다!\" \"노래 소리를 드려요!\" \"춤을 잘 추게 해줄게요!\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 4,
+      "imageUrl": "https://i.ibb.co/TDZFSqF4/2-2.png",
+      "text": "그때였어! 콰르르릉! 초대받지 못한 사악한 마녀가 나타났어. 마녀는 화가 나서 얼굴이 새빨갛게 변했어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 5,
+      "imageUrl": "https://i.ibb.co/pjgGy3cj/3-1.png",
+      "text": "\"날 초대하지 않았구나! 그럼 내 선물을 받아라!\" 마녀가 지팡이를 휘두르며 외쳤어. \"이 공주는 열여섯 살이 되면 물레에 찔려 죽을 것이다!\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 6,
+      "imageUrl": "https://i.ibb.co/0jDMFHSX/3-2.png",
+      "text": "모두가 깜짝 놀랐어! 그때 아직 선물을 주지 않은 어린 요정이 나섰어. \"제가 저주를 약하게 만들어드릴게요!\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 7,
+      "imageUrl": "https://i.ibb.co/ZzVhWYD5/4-1.png",
+      "text": "요정이 지팡이를 흔들며 말했어. \"공주님은 죽지 않고 깊은 잠에 빠질 거예요.\" \"그리고 진정한 사랑의 키스로 깨어날 거랍니다!\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 8,
+      "imageUrl": "https://i.ibb.co/m5d8BVv8/4-2.png",
+      "text": "왕은 나라의 모든 물레를 없애버리라고 명령했어. 신하들은 물레를 모두 치워버렸어. 하지만 운명은 피할 수 없었단다...",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 9,
+      "imageUrl": "https://i.ibb.co/vC9byqmM/5-1.png",
+      "text": "세월이 흘러 공주는 열여섯 살이 되었어. 공주는 무척 아름답고 착하게 자랐지. 어느 날, 공주는 성을 구경하기 시작했어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 10,
+      "imageUrl": "https://i.ibb.co/JFrc2LF8/5-2.png",
+      "text": "\"저 계단은 어디로 이어질까?\" 공주는 본 적 없는 나선 계단을 발견했어. 계단을 올라올라 탑 꼭대기에 이르렀지.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 11,
+      "imageUrl": "https://i.ibb.co/bjvNQZ2n/6-1.png",
+      "text": "탑 꼭대기 작은 방에는 한 노파가 있었어. 노파는 낡은 물레로 실을 잣고 있었지. \"할머니, 이게 뭐예요?\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 12,
+      "imageUrl": "https://i.ibb.co/cK7ctb2y/6-2.png",
+      "text": "\"물레란다. 한번 만져보렴.\" 공주가 물레를 만지는 순간! 따끔! 손가락에 바늘이 찔렸어. 공주는 그 자리에 픽 쓰러져 깊은 잠에 빠졌어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 13,
+      "imageUrl": "https://i.ibb.co/fz7Qwkq5/7-1.png",
+      "text": "공주와 함께 온 성이 잠에 빠졌어. 왕과 왕비도, 신하들도, 요리사도, 말들도... 모든 것이 멈춰버렸어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 14,
+      "imageUrl": "https://i.ibb.co/k2Ft2ChQ/7-2.png",
+      "text": "성 주변에는 가시덤불이 무성하게 자라났어. 아무도 성에 들어갈 수 없었지. 백 년이 흘렀어...",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 15,
+      "imageUrl": "https://i.ibb.co/Kjh3dkBH/8-1.png",
+      "text": "백 년이 흐른 어느 날, 한 왕자가 이 숲을 지나갔어. \"저 가시덤불 너머에 무엇이 있을까?\" 왕자는 전설로 내려오는 잠자는 공주 이야기를 들었어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 16,
+      "imageUrl": "https://i.ibb.co/5gjPSTJG/8-2.png",
+      "text": "놀랍게도 가시덤불이 저절로 길을 열어줬어! 왕자는 성 안으로 들어갔어. 모든 사람들이 잠들어 있었어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 17,
+      "imageUrl": "https://i.ibb.co/Tx9RMPv7/9-1.png",
+      "text": "왕자는 탑 꼭대기 방으로 올라갔어. 그곳에는 아름다운 공주가 잠들어 있었어. \"세상에! 이렇게 아름다운 분을 본 적이 없어!\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 18,
+      "imageUrl": "https://i.ibb.co/YBT6fffr/9-2.png",
+      "text": "왕자는 공주를 보고 사랑에 빠졌어. 왕자가 공주에게 사랑의 키스를 했어. 그 순간! 공주가 눈을 떴어!",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 19,
+      "imageUrl": "https://i.ibb.co/Jw9vDbvK/10-1.png",
+      "text": "공주와 함께 온 성이 깨어났어! 왕과 왕비도, 신하들도, 말들도 모두 깨어났지. \"어머, 우리가 얼마나 잤나요?\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 20,
+      "imageUrl": "https://i.ibb.co/tMc2rstM/10-2.png",
+      "text": "공주와 왕자는 서로 사랑하게 되었어. 두 사람은 아름다운 결혼식을 올렸어. 그리고 행복하게 오래오래 살았단다.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    }
+  ],
+  "metadata": {
+    "totalPages": 20,
+    "estimatedReadTime": "0분",
+    "difficulty": "쉬움"
+  }
+}
