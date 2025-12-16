@@ -8,7 +8,7 @@
     "질투심",
     "선한 마음"
   ],
-  "pageCount": 3,
+  "pageCount": 20,
   "isPublished": true,
   "createdAt": "2025-12-16",
   "updatedAt": "2025-12-16",
@@ -17,7 +17,7 @@
     {
       "pageNumber": 1,
       "imageUrl": "https://i.ibb.co/fz1CFJX6/1-1.jpg",
-      "text": "121",
+      "text": "옛날 옛날, 추운 겨울날이었어. 어느 왕비가 창가에 앉아 바느질을 하고 있었지. \"눈처럼 하얀 피부, 피처럼 붉은 입술, 흑단나무처럼 검은 머리를 가진 아이가 태어났으면 좋겠어.\"",
       "ttsSettings": {
         "voice": "female",
         "speed": 1,
@@ -27,7 +27,7 @@
     {
       "pageNumber": 2,
       "imageUrl": "https://i.ibb.co/gMvrL3tQ/1-2.jpg",
-      "text": "111",
+      "text": "왕비의 소원대로 예쁜 공주가 태어났어. 공주의 이름은 '백설공주'였단다. 하지만 슬프게도 왕비는 얼마 후 세상을 떠나고 말았어.",
       "ttsSettings": {
         "voice": "female",
         "speed": 1,
@@ -36,8 +36,178 @@
     },
     {
       "pageNumber": 3,
-      "imageUrl": "https://i.ibb.co/gMvrL3tQ/1-2.jpg",
-      "text": "111",
+      "imageUrl": "https://i.ibb.co/Qjh5w03L/2-1.jpg",
+      "text": "세월이 흘러 왕은 새로운 왕비를 맞이했어. 새 왕비는 무척 아름다웠지만, 마음은 차갑고 교만했어. 왕비는 마법 거울을 가지고 있었단다.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 4,
+      "imageUrl": "https://i.ibb.co/mVsHz0wC/2-2.jpg",
+      "text": "\"거울아, 거울아, 세상에서 누가 가장 예쁘니?\" \"왕비님이 가장 아름다우십니다.\" 왕비는 매일매일 거울에게 물어보며 만족스러워했어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 5,
+      "imageUrl": "https://i.ibb.co/jkJSZ01c/3-1.jpg",
+      "text": "백설공주는 무럭무럭 자라났어. 눈처럼 하얀 피부, 피처럼 붉은 입술, 검은 머리를 가진 아름다운 소녀가 되었지. 공주는 마음씨도 착하고 다정했어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 6,
+      "imageUrl": "https://i.ibb.co/chp877WZ/3-2.jpg",
+      "text": "어느 날, 왕비가 거울에게 물었어. \"거울아, 거울아, 세상에서 누가 가장 예쁘니?\" \"백설공주가 가장 아름답습니다.\" 왕비는 화가 나서 얼굴이 붉으락푸르락!",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 7,
+      "imageUrl": "https://i.ibb.co/yngvnjS7/4-1.jpg",
+      "text": "왕비는 사냥꾼을 불러 무서운 명령을 내렸어. \"백설공주를 숲으로 데려가서 없애버려!\" 사냥꾼은 공주를 데리고 깊은 숲속으로 갔어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 8,
+      "imageUrl": "https://i.ibb.co/9HPmhDJs/4-2.jpg",
+      "text": "하지만 착한 사냥꾼은 공주를 차마 해칠 수 없었어. \"공주님, 왕비님이 찾지 못하는 곳으로 멀리 도망치세요!\" 백설공주는 허겁지겁 정신없이 달아났어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 9,
+      "imageUrl": "https://i.ibb.co/QvsmCxf8/5-1.jpg",
+      "text": "공주는 캄캄한 숲속을 헤매고 헤맸어. 무섭고 외로웠지만 계속 걸었어. 해가 지고 별이 뜨기 시작했어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 10,
+      "imageUrl": "https://i.ibb.co/ch9GScds/5-2.jpg",
+      "text": "그때 저 멀리 작은 오두막집이 보였어. 공주는 문을 두드렸지만 아무도 없었어. \"너무 피곤해. 잠깐만 쉬어야겠어.\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 11,
+      "imageUrl": "https://i.ibb.co/NdL96GVb/6-1.jpg",
+      "text": "그날 밤, 오두막집에 사는 일곱 난쟁이가 돌아왔어. \"누가 우리 집에 들어왔을까?\" 난쟁이들은 침대에서 자고 있는 백설공주를 발견했어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 12,
+      "imageUrl": "https://i.ibb.co/Q3qVQHZB/6-2.jpg",
+      "text": "아침이 되자 백설공주가 눈을 떴어. 공주는 자신의 이야기를 들려줬어. \"가엾은 공주님, 우리와 함께 사세요!\" 난쟁이들은 친절하게 공주를 받아들였어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 13,
+      "imageUrl": "https://i.ibb.co/G3f3HZnP/7-1.jpg",
+      "text": "한편 성에서는 왕비가 다시 거울에게 물었어. \"거울아, 거울아, 세상에서 누가 가장 예쁘니?\" \"일곱 난쟁이의 집에 사는 백설공주가 가장 아름답습니다.\" 왕비는 화가 머리끝까지 났어!",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 14,
+      "imageUrl": "https://i.ibb.co/nMvdfsbC/7-2.jpg",
+      "text": "왕비는 늙은 할머니로 변장했어. 그리고 빨갛고 예쁜 사과에 독을 넣었단다. \"이번에야말로 백설공주를 없앨 거야!\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 15,
+      "imageUrl": "https://i.ibb.co/Z6GT5PWk/8-1.jpg",
+      "text": "다음 날, 늙은 할머니가 오두막집을 찾아왔어. \"예쁜 아가씨, 맛있는 사과 하나 드실래요?\" 빨갛게 익은 사과는 정말 맛있어 보였어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 16,
+      "imageUrl": "https://i.ibb.co/tMjBLSYt/8-2.jpg",
+      "text": "백설공주는 사과를 한 입 베어 물었어. 그 순간 공주는 픽 쓰러져 버렸어! 난쟁이들이 돌아왔을 때는 이미 너무 늦었어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 17,
+      "imageUrl": "https://i.ibb.co/prr59011/9-1.jpg",
+      "text": "난쟁이들은 아름다운 유리관에 백설공주를 모셨어. 어느 날, 한 왕자가 지나가다가 공주를 보았어. \"이렇게 아름다운 공주를 본 적이 없어!\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 18,
+      "imageUrl": "https://i.ibb.co/Gvvk0Bn3/9-2.jpg",
+      "text": "왕자가 공주에게 사랑의 키스를 했어. 그 순간 기적이 일어났어! 백설공주의 목에서 독사과가 톡! 튀어나왔어. \"어머, 제가 얼마나 잤나요?\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 19,
+      "imageUrl": "https://i.ibb.co/PzFHGGPR/10-1.jpg",
+      "text": "백설공주는 다시 살아났어! 일곱 난쟁이들은 너무너무 기뻤어. \"공주님이 깨어났어요!\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 20,
+      "imageUrl": "https://i.ibb.co/qMy1ty9T/10-2.jpg",
+      "text": "백설공주와 왕자는 아름다운 결혼식을 올렸어. 일곱 난쟁이들도 초대받아 함께 축하했어. 그리고 모두 행복하게 오래오래 살았단다.",
       "ttsSettings": {
         "voice": "female",
         "speed": 1,
@@ -46,7 +216,7 @@
     }
   ],
   "metadata": {
-    "totalPages": 3,
+    "totalPages": 20,
     "estimatedReadTime": "0분",
     "difficulty": "쉬움"
   }
