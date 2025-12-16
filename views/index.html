@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 동화책 세상</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 재미있는 동화책 세상</h1>
+            <p>신나는 이야기가 가득한 동화책을 만나보세요!</p>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <select id="ageFilter" class="form-control" style="width: auto; padding: 10px;">
+                    <option value="">전체 연령</option>
+                    <option value="3-5세">3-5세</option>
+                    <option value="5-7세">5-7세</option>
+                    <option value="4-6세">4-6세</option>
+                </select>
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="form-control" 
+                    placeholder="🔍 제목이나 작가로 검색..." 
+                    style="width: 300px; padding: 10px;"
+                >
+            </div>
+            <a href="/admin" class="btn btn-secondary">⚙️ 관리자 페이지</a>
+        </div>
+
+        <div id="storybookList" class="card-grid">
+            <div class="loading">동화책을 불러오는 중입니다</div>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+    <script>
+        let allStorybooks = [];
+
+        // 동화책 목록 로드
+        async function loadStorybooks() {
+            try {
+                const response = await fetch('/api/storybooks');
+                const data = await response.json();
+                allStorybooks = data.storybooks.filter(s => s.isPublished);
+                displayStorybooks(allStorybooks);
+            } catch (error) {
+                document.getElementById('storybookList').innerHTML = 
+                    '<div class="loading" style="color: #E57373;">동화책을 불러오는데 실패했습니다 😢</div>';
+            }
+        }
+
+        // 동화책 표시
+        function displayStorybooks(storybooks) {
+            const container = document.getElementById('storybookList');
+            
+            if (storybooks.length === 0) {
+                container.innerHTML = '<div class="loading">등록된 동화책이 없습니다</div>';
+                return;
+            }
+
+            container.innerHTML = storybooks.map(story => `
+                <div class="card" onclick="openStorybook('${story.id}')">
+                    <img 
+                        src="${story.coverImageUrl || 'https://via.placeholder.com/400x300?text=No+Image'}" 
+                        alt="${story.title}"
+                        class="card-image"
+                        onerror="this.src='https://via.placeholder.com/400x300?text=No+Image'"
+                    >
+                    <div class="card-content">
+                        <h3 class="card-title">${story.title}</h3>
+                        <p class="card-author">✍️ ${story.author || '작가 미상'}</p>
+                        <div class="card-meta">
+                            <span>🎯 ${story.ageGroup || '전체'}</span>
+                            <span>📄 ${story.pageCount}페이지</span>
+                        </div>
+                        <div class="tags">
+                            ${story.tags.map(tag => `<span class="tag">#${tag}</span>`).join('')}
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 동화책 열기
+        function openStorybook(id) {
+            window.location.href = `/reader/${id}`;
+        }
+
+        // 필터링
+        function filterStorybooks() {
+            const ageFilter = document.getElementById('ageFilter').value;
+            const searchQuery = document.getElementById('searchInput').value.toLowerCase();
+
+            let filtered = allStorybooks;
+
+            // 연령대 필터
+            if (ageFilter) {
+                filtered = filtered.filter(s => s.ageGroup === ageFilter);
+            }
+
+            // 검색 필터
+            if (searchQuery) {
+                filtered = filtered.filter(s => 
+                    s.title.toLowerCase().includes(searchQuery) ||
+                    (s.author && s.author.toLowerCase().includes(searchQuery))
+                );
+            }
+
+            displayStorybooks(filtered);
+        }
+
+        // 이벤트 리스너
+        document.getElementById('ageFilter').addEventListener('change', filterStorybooks);
+        document.getElementById('searchInput').addEventListener('input', filterStorybooks);
+
+        // 초기 로드
+        loadStorybooks();
+    </script>
+</body>
+</html>

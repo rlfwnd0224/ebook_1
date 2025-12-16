@@ -1,0 +1,76 @@
+{
+  "id": "story-003",
+  "title": "별빛 여행",
+  "author": "박상상",
+  "coverImageUrl": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=500",
+  "ageGroup": "4-6세",
+  "tags": ["우주", "꿈", "상상"],
+  "description": "별빛을 따라 떠나는 환상적인 우주 여행",
+  "pages": [
+    {
+      "pageNumber": 1,
+      "imageUrl": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800",
+      "text": "밤하늘에 별이 가득한 어느 날 밤, 민수는 창문 밖을 바라보았어요. 반짝이는 별들이 손짓하는 것 같았답니다.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1.0,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 2,
+      "imageUrl": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=800",
+      "text": "갑자기 가장 밝게 빛나는 별이 말을 걸었어요. '민수야, 우리와 함께 우주 여행을 떠나지 않을래?'",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1.0,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 3,
+      "imageUrl": "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=800",
+      "text": "민수는 별빛 우주선을 타고 하늘을 날아올랐어요. 달을 지나고, 별들 사이를 지나며 신나는 여행이 시작되었답니다.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1.0,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 4,
+      "imageUrl": "https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=800",
+      "text": "우주에서 다양한 행성들을 구경했어요. 빨간 화성, 고리가 있는 토성, 모두 너무나 아름다웠답니다.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1.0,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 5,
+      "imageUrl": "https://images.unsplash.com/photo-1506443432602-ac2fcd6f54e0?w=800",
+      "text": "별들과 춤을 추며 즐거운 시간을 보냈어요. '이 순간을 평생 기억할 거야!' 민수가 외쳤답니다.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1.0,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 6,
+      "imageUrl": "https://images.unsplash.com/photo-1464802686167-b939a6910659?w=800",
+      "text": "여행을 마치고 다시 집으로 돌아온 민수는 행복한 꿈을 꾸었어요. 언젠가 또 별빛 여행을 떠날 날을 기대하며 잠들었답니다.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1.0,
+        "autoPlay": true
+      }
+    }
+  ],
+  "metadata": {
+    "totalPages": 6,
+    "estimatedReadTime": "4분",
+    "difficulty": "보통"
+  }
+}

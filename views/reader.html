@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📖 동화책 읽기</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div style="margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+            <a href="/" class="btn btn-secondary">🏠 목록으로</a>
+            <h2 id="storyTitle" style="color: #FF6B9D; margin: 0;">동화책 제목</h2>
+            <div style="width: 120px;"></div>
+        </div>
+
+        <div class="reader-container">
+            <div class="reader-content">
+                <img 
+                    id="pageImage" 
+                    class="reader-image" 
+                    src="" 
+                    alt="동화책 이미지"
+                    onerror="this.src='https://via.placeholder.com/800x600?text=Image+Not+Found'"
+                >
+                <div id="pageText" class="reader-text">
+                    동화책을 불러오는 중...
+                </div>
+            </div>
+            <div class="reader-controls">
+                <div class="page-nav">
+                    <button class="nav-btn" id="prevBtn" onclick="prevPage()" disabled>◀</button>
+                    <button class="nav-btn" id="nextBtn" onclick="nextPage()" disabled>▶</button>
+                </div>
+                <div class="page-indicator">
+                    <span id="currentPage">1</span> / <span id="totalPages">1</span>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <button class="btn btn-primary" onclick="toggleAutoPlay()">
+                        <span id="autoPlayIcon">▶️</span> 자동 읽기
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- TTS 컨트롤 -->
+        <div class="tts-controls">
+            <button class="tts-btn" id="playBtn" onclick="playTTS()" title="읽어주기">
+                🔊
+            </button>
+            <button class="tts-btn" id="pauseBtn" onclick="pauseTTS()" title="일시정지" style="display: none;">
+                ⏸️
+            </button>
+            <button class="tts-btn" onclick="stopTTS()" title="정지">
+                ⏹️
+            </button>
+            <div class="speed-control">
+                <button class="speed-btn" onclick="setSpeed(0.8)" data-speed="0.8">🐢 느림</button>
+                <button class="speed-btn active" onclick="setSpeed(1.0)" data-speed="1.0">🐰 보통</button>
+                <button class="speed-btn" onclick="setSpeed(1.3)" data-speed="1.3">🐆 빠름</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentStory = null;
+        let currentPageIndex = 0;
+        let synthesis = window.speechSynthesis;
+        let currentUtterance = null;
+        let isAutoPlay = false;
+        let currentSpeed = 1.0;
+
+        // 동화책 로드
+        async function loadStory() {
+            const storyId = window.location.pathname.split('/').pop();
+            try {
+                const response = await fetch(`/api/storybooks/${storyId}`);
+                currentStory = await response.json();
+                
+                document.getElementById('storyTitle').textContent = currentStory.title;
+                document.getElementById('totalPages').textContent = currentStory.pages.length;
+                
+                // 저장된 진행률 불러오기
+                const savedProgress = localStorage.getItem(`story-${storyId}-progress`);
+                if (savedProgress) {
+                    currentPageIndex = parseInt(savedProgress);
+                }
+                
+                displayPage(currentPageIndex);
+            } catch (error) {
+                document.getElementById('pageText').textContent = '동화책을 불러오는데 실패했습니다 😢';
+            }
+        }
+
+        // 페이지 표시
+        function displayPage(index) {
+            if (!currentStory || !currentStory.pages[index]) return;
+
+            const page = currentStory.pages[index];
+            
+            document.getElementById('pageImage').src = page.imageUrl;
+            document.getElementById('pageText').textContent = page.text;
+            document.getElementById('currentPage').textContent = index + 1;
+
+            // 버튼 상태 업데이트
+            document.getElementById('prevBtn').disabled = index === 0;
+            document.getElementById('nextBtn').disabled = index === currentStory.pages.length - 1;
+
+            // 진행률 저장
+            const storyId = currentStory.id;
+            localStorage.setItem(`story-${storyId}-progress`, index);
+
+            // TTS 정지
+            stopTTS();
+
+            // 자동 재생이 켜져있으면 자동으로 읽기
+            if (isAutoPlay) {
+                setTimeout(() => playTTS(), 500);
+            }
+        }
+
+        // 이전 페이지
+        function prevPage() {
+            if (currentPageIndex > 0) {
+                currentPageIndex--;
+                displayPage(currentPageIndex);
+            }
+        }
+
+        // 다음 페이지
+        function nextPage() {
+            if (currentPageIndex < currentStory.pages.length - 1) {
+                currentPageIndex++;
+                displayPage(currentPageIndex);
+            }
+        }
+
+        // 자동 읽기 토글
+        function toggleAutoPlay() {
+            isAutoPlay = !isAutoPlay;
+            const icon = document.getElementById('autoPlayIcon');
+            icon.textContent = isAutoPlay ? '⏸️' : '▶️';
+            
+            if (isAutoPlay) {
+                playTTS();
+            }
+        }
+
+        // TTS 재생
+        function playTTS() {
+            if (!currentStory || !currentStory.pages[currentPageIndex]) return;
+
+            stopTTS();
+
+            const text = currentStory.pages[currentPageIndex].text;
+            if (!text) return;
+
+            currentUtterance = new SpeechSynthesisUtterance(text);
+            currentUtterance.lang = 'ko-KR';
+            currentUtterance.rate = currentSpeed;
+            
+            // 음성 선택 (한국어 여성 음성 우선)
+            const voices = synthesis.getVoices();
+            const koreanVoice = voices.find(voice => voice.lang.includes('ko'));
+            if (koreanVoice) {
+                currentUtterance.voice = koreanVoice;
+            }
+
+            // 재생 완료 시 다음 페이지로
+            currentUtterance.onend = () => {
+                document.getElementById('playBtn').style.display = 'block';
+                document.getElementById('pauseBtn').style.display = 'none';
+                document.getElementById('playBtn').classList.remove('active');
+                
+                if (isAutoPlay && currentPageIndex < currentStory.pages.length - 1) {
+                    setTimeout(() => {
+                        nextPage();
+                    }, 1000);
+                }
+            };
+
+            synthesis.speak(currentUtterance);
+            document.getElementById('playBtn').style.display = 'none';
+            document.getElementById('pauseBtn').style.display = 'block';
+            document.getElementById('playBtn').classList.add('active');
+        }
+
+        // TTS 일시정지
+        function pauseTTS() {
+            if (synthesis.speaking) {
+                synthesis.pause();
+                document.getElementById('playBtn').style.display = 'block';
+                document.getElementById('pauseBtn').style.display = 'none';
+            }
+        }
+
+        // TTS 정지
+        function stopTTS() {
+            synthesis.cancel();
+            document.getElementById('playBtn').style.display = 'block';
+            document.getElementById('pauseBtn').style.display = 'none';
+            document.getElementById('playBtn').classList.remove('active');
+        }
+
+        // 속도 설정
+        function setSpeed(speed) {
+            currentSpeed = speed;
+            
+            // 버튼 active 상태 변경
+            document.querySelectorAll('.speed-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (parseFloat(btn.dataset.speed) === speed) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // 재생 중이면 속도 적용
+            if (synthesis.speaking) {
+                const wasPlaying = !synthesis.paused;
+                stopTTS();
+                if (wasPlaying) {
+                    setTimeout(() => playTTS(), 100);
+                }
+            }
+        }
+
+        // 키보드 네비게이션
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                prevPage();
+            } else if (e.key === 'ArrowRight') {
+                nextPage();
+            } else if (e.key === ' ') {
+                e.preventDefault();
+                if (synthesis.speaking && !synthesis.paused) {
+                    pauseTTS();
+                } else {
+                    playTTS();
+                }
+            }
+        });
+
+        // 음성 로드 대기
+        if (synthesis.onvoiceschanged !== undefined) {
+            synthesis.onvoiceschanged = () => {};
+        }
+
+        // 초기 로드
+        loadStory();
+    </script>
+</body>
+</html>

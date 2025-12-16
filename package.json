@@ -1,0 +1,22 @@
+{
+  "name": "storybook-viewer",
+  "version": "1.0.0",
+  "description": "유아 교육용 동화책 이북 뷰어",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "build": "echo 'No build step required'"
+  },
+  "keywords": ["storybook", "ebook", "education", "kids"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

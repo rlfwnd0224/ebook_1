@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚙️ 관리자 페이지</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="admin-header">
+            <div>
+                <h1 style="color: #FF6B9D; margin-bottom: 5px;">⚙️ 동화책 관리</h1>
+                <p style="color: #666;">동화책을 추가하고 관리할 수 있습니다</p>
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <a href="/" class="btn btn-secondary">🏠 메인으로</a>
+                <button class="btn btn-primary" onclick="openCreateModal()">➕ 새 동화책 만들기</button>
+            </div>
+        </div>
+
+        <div id="storybookList" class="card-grid">
+            <div class="loading">동화책을 불러오는 중입니다</div>
+        </div>
+    </div>
+
+    <!-- 동화책 생성 모달 -->
+    <div id="createModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">새 동화책 만들기</h2>
+                <button class="close-btn" onclick="closeCreateModal()">×</button>
+            </div>
+            
+            <form id="createForm" onsubmit="createStorybook(event)">
+                <div class="form-group">
+                    <label>제목 *</label>
+                    <input type="text" class="form-control" id="title" required>
+                </div>
+
+                <div class="form-group">
+                    <label>작가</label>
+                    <input type="text" class="form-control" id="author">
+                </div>
+
+                <div class="form-group">
+                    <label>표지 이미지 URL *</label>
+                    <input type="url" class="form-control" id="coverImageUrl" placeholder="https://example.com/image.jpg" required>
+                </div>
+
+                <div class="form-group">
+                    <label>연령대</label>
+                    <select class="form-control" id="ageGroup">
+                        <option value="">선택 안 함</option>
+                        <option value="3-5세">3-5세</option>
+                        <option value="5-7세">5-7세</option>
+                        <option value="4-6세">4-6세</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>태그 (쉼표로 구분)</label>
+                    <input type="text" class="form-control" id="tags" placeholder="우정, 모험, 자연">
+                </div>
+
+                <div class="form-group">
+                    <label>설명</label>
+                    <textarea class="form-control" id="description" rows="3"></textarea>
+                </div>
+
+                <div style="display: flex; gap: 10px; justify-content: flex-end;">
+                    <button type="button" class="btn btn-secondary" onclick="closeCreateModal()">취소</button>
+                    <button type="submit" class="btn btn-primary">생성하기</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 동화책 편집 모달 -->
+    <div id="editModal" class="modal">
+        <div class="modal-content" style="max-width: 900px;">
+            <div class="modal-header">
+                <h2 class="modal-title">동화책 편집</h2>
+                <button class="close-btn" onclick="closeEditModal()">×</button>
+            </div>
+            
+            <div id="editContent">
+                <!-- Step 1: 기본 정보 -->
+                <div id="step1" class="edit-step">
+                    <h3 style="color: #FFA500; margin-bottom: 20px;">📝 기본 정보</h3>
+                    <form id="basicInfoForm">
+                        <div class="form-group">
+                            <label>제목 *</label>
+                            <input type="text" class="form-control" id="editTitle" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>작가</label>
+                            <input type="text" class="form-control" id="editAuthor">
+                        </div>
+
+                        <div class="form-group">
+                            <label>표지 이미지 URL *</label>
+                            <input type="url" class="form-control" id="editCoverImageUrl" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>연령대</label>
+                            <select class="form-control" id="editAgeGroup">
+                                <option value="">선택 안 함</option>
+                                <option value="3-5세">3-5세</option>
+                                <option value="5-7세">5-7세</option>
+                                <option value="4-6세">4-6세</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>태그 (쉼표로 구분)</label>
+                            <input type="text" class="form-control" id="editTags">
+                        </div>
+
+                        <div class="form-group">
+                            <label>공개 상태</label>
+                            <select class="form-control" id="editIsPublished">
+                                <option value="true">공개</option>
+                                <option value="false">비공개</option>
+                            </select>
+                        </div>
+
+                        <button type="button" class="btn btn-primary" onclick="saveBasicInfo()">저장 및 다음</button>
+                    </form>
+                </div>
+
+                <!-- Step 2: 이미지 URL 일괄 입력 -->
+                <div id="step2" class="edit-step" style="display: none;">
+                    <h3 style="color: #FFA500; margin-bottom: 20px;">🖼️ 이미지 URL 일괄 입력</h3>
+                    
+                    <div class="form-group">
+                        <label>이미지 URL 입력 (한 줄에 하나씩)</label>
+                        <textarea 
+                            class="form-control" 
+                            id="bulkImageUrls" 
+                            rows="10"
+                            placeholder="https://example.com/page-01.jpg
+https://example.com/page-02.jpg
+https://example.com/page-03.jpg"
+                        ></textarea>
+                        <small style="color: #666; display: block; margin-top: 5px;">
+                            💡 한 줄에 하나의 이미지 URL을 입력하세요. 입력한 순서대로 페이지가 생성됩니다.
+                        </small>
+                    </div>
+
+                    <div style="display: flex; gap: 10px;">
+                        <button class="btn btn-secondary" onclick="previewImages()">👁️ 미리보기</button>
+                        <button class="btn btn-primary" onclick="saveBulkImages()">💾 저장하고 다음</button>
+                    </div>
+
+                    <div id="imagePreview" class="preview-grid" style="margin-top: 20px;"></div>
+                </div>
+
+                <!-- Step 3: 텍스트 일괄 입력 -->
+                <div id="step3" class="edit-step" style="display: none;">
+                    <h3 style="color: #FFA500; margin-bottom: 20px;">📖 텍스트 일괄 입력</h3>
+                    
+                    <div class="form-group">
+                        <label>텍스트 입력 (구분자: ---)</label>
+                        <textarea 
+                            class="form-control" 
+                            id="bulkTexts" 
+                            rows="15"
+                            placeholder="첫 번째 페이지의 텍스트 내용
+---
+두 번째 페이지의 텍스트 내용
+---
+세 번째 페이지의 텍스트 내용"
+                        ></textarea>
+                        <small style="color: #666; display: block; margin-top: 5px;">
+                            💡 각 페이지의 텍스트를 <strong>---</strong> 구분자로 나누어 입력하세요.
+                        </small>
+                        <div id="pageCountInfo" style="margin-top: 10px; font-weight: 600;"></div>
+                    </div>
+
+                    <div style="display: flex; gap: 10px;">
+                        <button class="btn btn-secondary" onclick="showStep(2)">← 이전</button>
+                        <button class="btn btn-primary" onclick="saveBulkTexts()">💾 저장하고 완료</button>
+                    </div>
+                </div>
+
+                <!-- Step 4: 완료 -->
+                <div id="step4" class="edit-step" style="display: none; text-align: center;">
+                    <div style="font-size: 80px; margin-bottom: 20px;">✅</div>
+                    <h3 style="color: #81C784; margin-bottom: 15px;">동화책이 성공적으로 생성되었습니다!</h3>
+                    <p style="color: #666; margin-bottom: 30px;">이제 메인 페이지에서 동화책을 확인할 수 있습니다.</p>
+                    <div style="display: flex; gap: 10px; justify-content: center;">
+                        <button class="btn btn-secondary" onclick="closeEditModal(); loadStorybooks();">목록으로</button>
+                        <button class="btn btn-primary" onclick="viewStorybook()">📖 동화책 보기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let allStorybooks = [];
+        let currentEditId = null;
+
+        // 동화책 목록 로드
+        async function loadStorybooks() {
+            try {
+                const response = await fetch('/api/storybooks');
+                const data = await response.json();
+                allStorybooks = data.storybooks;
+                displayStorybooks(allStorybooks);
+            } catch (error) {
+                document.getElementById('storybookList').innerHTML = 
+                    '<div class="loading" style="color: #E57373;">동화책을 불러오는데 실패했습니다</div>';
+            }
+        }
+
+        // 동화책 표시
+        function displayStorybooks(storybooks) {
+            const container = document.getElementById('storybookList');
+            
+            if (storybooks.length === 0) {
+                container.innerHTML = '<div class="loading">등록된 동화책이 없습니다. 새로 만들어보세요!</div>';
+                return;
+            }
+
+            container.innerHTML = storybooks.map(story => `
+                <div class="card">
+                    <img 
+                        src="${story.coverImageUrl || 'https://via.placeholder.com/400x300?text=No+Image'}" 
+                        alt="${story.title}"
+                        class="card-image"
+                        onerror="this.src='https://via.placeholder.com/400x300?text=No+Image'"
+                    >
+                    <div class="card-content">
+                        <h3 class="card-title">${story.title}</h3>
+                        <p class="card-author">✍️ ${story.author || '작가 미상'}</p>
+                        <div class="card-meta">
+                            <span>🎯 ${story.ageGroup || '전체'}</span>
+                            <span>📄 ${story.pageCount}페이지</span>
+                        </div>
+                        <div class="tags">
+                            ${story.tags.map(tag => `<span class="tag">#${tag}</span>`).join('')}
+                            ${story.isPublished ? '<span class="tag" style="background: #C8E6C9; color: #4CAF50;">✅ 공개</span>' : '<span class="tag" style="background: #FFCDD2; color: #F44336;">🔒 비공개</span>'}
+                        </div>
+                        <div style="display: flex; gap: 8px; margin-top: 15px;">
+                            <button class="btn btn-primary" style="flex: 1; padding: 8px;" onclick="editStorybook('${story.id}')">✏️ 편집</button>
+                            <button class="btn btn-danger" style="padding: 8px;" onclick="deleteStorybook('${story.id}', '${story.title}')">🗑️</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 생성 모달 열기
+        function openCreateModal() {
+            document.getElementById('createModal').classList.add('show');
+            document.getElementById('createForm').reset();
+        }
+
+        // 생성 모달 닫기
+        function closeCreateModal() {
+            document.getElementById('createModal').classList.remove('show');
+        }
+
+        // 동화책 생성
+        async function createStorybook(event) {
+            event.preventDefault();
+
+            const tags = document.getElementById('tags').value
+                .split(',')
+                .map(t => t.trim())
+                .filter(t => t);
+
+            const data = {
+                title: document.getElementById('title').value,
+                author: document.getElementById('author').value,
+                coverImageUrl: document.getElementById('coverImageUrl').value,
+                ageGroup: document.getElementById('ageGroup').value,
+                tags: tags,
+                description: document.getElementById('description').value
+            };
+
+            try {
+                const response = await fetch('/api/admin/storybooks', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+                if (result.success) {
+                    closeCreateModal();
+                    alert('✅ 동화책이 생성되었습니다!');
+                    currentEditId = result.id;
+                    await loadStoryDetail(result.id);
+                    openEditModal();
+                    showStep(2);
+                } else {
+                    alert('❌ 생성 실패: ' + result.error);
+                }
+            } catch (error) {
+                alert('❌ 생성 실패: ' + error.message);
+            }
+        }
+
+        // 편집 모달 열기
+        function openEditModal() {
+            document.getElementById('editModal').classList.add('show');
+        }
+
+        // 편집 모달 닫기
+        function closeEditModal() {
+            document.getElementById('editModal').classList.remove('show');
+            currentEditId = null;
+            showStep(1);
+        }
+
+        // 동화책 편집
+        async function editStorybook(id) {
+            currentEditId = id;
+            await loadStoryDetail(id);
+            openEditModal();
+            showStep(1);
+        }
+
+        // 동화책 상세 로드
+        async function loadStoryDetail(id) {
+            try {
+                const response = await fetch(`/api/storybooks/${id}`);
+                const story = await response.json();
+
+                document.getElementById('editTitle').value = story.title || '';
+                document.getElementById('editAuthor').value = story.author || '';
+                document.getElementById('editCoverImageUrl').value = story.coverImageUrl || '';
+                document.getElementById('editAgeGroup').value = story.ageGroup || '';
+                document.getElementById('editTags').value = story.tags.join(', ');
+                document.getElementById('editIsPublished').value = story.isPublished ? 'true' : 'false';
+
+                updatePageCountInfo(story.pages.length);
+            } catch (error) {
+                alert('동화책을 불러오는데 실패했습니다.');
+            }
+        }
+
+        // 기본 정보 저장
+        async function saveBasicInfo() {
+            const tags = document.getElementById('editTags').value
+                .split(',')
+                .map(t => t.trim())
+                .filter(t => t);
+
+            const data = {
+                title: document.getElementById('editTitle').value,
+                author: document.getElementById('editAuthor').value,
+                coverImageUrl: document.getElementById('editCoverImageUrl').value,
+                ageGroup: document.getElementById('editAgeGroup').value,
+                tags: tags,
+                isPublished: document.getElementById('editIsPublished').value === 'true'
+            };
+
+            try {
+                const response = await fetch(`/api/admin/storybooks/${currentEditId}`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+                if (result.success) {
+                    showStep(2);
+                } else {
+                    alert('저장 실패: ' + result.error);
+                }
+            } catch (error) {
+                alert('저장 실패: ' + error.message);
+            }
+        }
+
+        // 이미지 미리보기
+        function previewImages() {
+            const urls = document.getElementById('bulkImageUrls').value
+                .split('\n')
+                .map(url => url.trim())
+                .filter(url => url);
+
+            const preview = document.getElementById('imagePreview');
+            preview.innerHTML = urls.map((url, index) => `
+                <div class="preview-item">
+                    <img src="${url}" alt="Page ${index + 1}" onerror="this.src='https://via.placeholder.com/150?text=Error'">
+                    <span class="page-num">${index + 1}</span>
+                </div>
+            `).join('');
+        }
+
+        // 이미지 일괄 저장
+        async function saveBulkImages() {
+            const urls = document.getElementById('bulkImageUrls').value
+                .split('\n')
+                .map(url => url.trim())
+                .filter(url => url);
+
+            if (urls.length === 0) {
+                alert('이미지 URL을 입력해주세요.');
+                return;
+            }
+
+            try {
+                const response = await fetch(`/api/admin/storybooks/${currentEditId}/pages/bulk-images`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ imageUrls: urls })
+                });
+
+                const result = await response.json();
+                if (result.success) {
+                    updatePageCountInfo(result.pagesAdded);
+                    showStep(3);
+                } else {
+                    alert('저장 실패: ' + result.error);
+                }
+            } catch (error) {
+                alert('저장 실패: ' + error.message);
+            }
+        }
+
+        // 텍스트 일괄 저장
+        async function saveBulkTexts() {
+            const texts = document.getElementById('bulkTexts').value;
+
+            if (!texts.trim()) {
+                alert('텍스트를 입력해주세요.');
+                return;
+            }
+
+            try {
+                const response = await fetch(`/api/admin/storybooks/${currentEditId}/pages/bulk-texts`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ texts })
+                });
+
+                const result = await response.json();
+                if (result.success) {
+                    showStep(4);
+                } else {
+                    alert(result.warning || result.error);
+                }
+            } catch (error) {
+                alert('저장 실패: ' + error.message);
+            }
+        }
+
+        // 스텝 전환
+        function showStep(step) {
+            for (let i = 1; i <= 4; i++) {
+                document.getElementById(`step${i}`).style.display = 'none';
+            }
+            document.getElementById(`step${step}`).style.display = 'block';
+        }
+
+        // 페이지 수 정보 업데이트
+        function updatePageCountInfo(count) {
+            const info = document.getElementById('pageCountInfo');
+            info.textContent = `📊 현재 페이지 수: ${count}개`;
+            info.style.color = count > 0 ? '#4CAF50' : '#F44336';
+        }
+
+        // 동화책 보기
+        function viewStorybook() {
+            window.open(`/reader/${currentEditId}`, '_blank');
+        }
+
+        // 동화책 삭제
+        async function deleteStorybook(id, title) {
+            if (!confirm(`정말로 "${title}"을(를) 삭제하시겠습니까?`)) {
+                return;
+            }
+
+            try {
+                const response = await fetch(`/api/admin/storybooks/${id}`, {
+                    method: 'DELETE'
+                });
+
+                const result = await response.json();
+                if (result.success) {
+                    alert('✅ 동화책이 삭제되었습니다.');
+                    loadStorybooks();
+                } else {
+                    alert('❌ 삭제 실패: ' + result.error);
+                }
+            } catch (error) {
+                alert('❌ 삭제 실패: ' + error.message);
+            }
+        }
+
+        // 초기 로드
+        loadStorybooks();
+    </script>
+</body>
+</html>
