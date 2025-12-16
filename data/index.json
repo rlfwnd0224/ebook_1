@@ -2,40 +2,19 @@
   "storybooks": [
     {
       "id": "story-001",
-      "title": "숲속의 친구들",
-      "author": "김동화",
-      "coverImageUrl": "https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=500",
-      "ageGroup": "3-5세",
-      "tags": ["우정", "자연", "모험"],
-      "pageCount": 5,
-      "isPublished": true,
-      "createdAt": "2025-01-15",
-      "updatedAt": "2025-01-20"
-    },
-    {
-      "id": "story-002",
-      "title": "바다 탐험대",
-      "author": "이이야기",
-      "coverImageUrl": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500",
+      "title": "백설공주",
+      "author": "그림 형제",
+      "coverImageUrl": "https://i.ibb.co/RKpJ93m/0.jpg",
       "ageGroup": "5-7세",
-      "tags": ["바다", "모험", "용기"],
-      "pageCount": 4,
-      "isPublished": true,
-      "createdAt": "2025-01-16",
-      "updatedAt": "2025-01-20"
-    },
-    {
-      "id": "story-003",
-      "title": "별빛 여행",
-      "author": "박상상",
-      "coverImageUrl": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=500",
-      "ageGroup": "4-6세",
-      "tags": ["우주", "꿈", "상상"],
-      "pageCount": 6,
-      "isPublished": true,
-      "createdAt": "2025-01-17",
-      "updatedAt": "2025-01-20"
+      "tags": [
+        "질투심",
+        "선한 마음"
+      ],
+      "pageCount": 58,
+      "isPublished": false,
+      "createdAt": "2025-12-16",
+      "updatedAt": "2025-12-16"
     }
   ],
-  "lastUpdated": "2025-01-20T10:30:00Z"
+  "lastUpdated": "2025-12-16T06:37:16.403Z"
 }

@@ -151,6 +151,18 @@ https://example.com/page-03.jpg"
                         </small>
                     </div>
 
+                    <div class="form-group">
+                        <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                            <input type="checkbox" id="replacePages" style="width: 20px; height: 20px;">
+                            <span style="font-weight: 600; color: #E57373;">⚠️ 기존 페이지를 모두 삭제하고 새로 만들기</span>
+                        </label>
+                        <small style="color: #999; display: block; margin-left: 28px;">
+                            체크하지 않으면 기존 페이지 뒤에 추가됩니다. 중복 방지를 위해 새로 시작하려면 체크하세요.
+                        </small>
+                    </div>
+
+                    <div id="currentPageInfo" style="padding: 12px; background: #FFF9E5; border-radius: 8px; margin-bottom: 15px; font-weight: 600;"></div>
+
                     <div style="display: flex; gap: 10px;">
                         <button class="btn btn-secondary" onclick="previewImages()">👁️ 미리보기</button>
                         <button class="btn btn-primary" onclick="saveBulkImages()">💾 저장하고 다음</button>
@@ -341,6 +353,7 @@ https://example.com/page-03.jpg"
                 document.getElementById('editIsPublished').value = story.isPublished ? 'true' : 'false';
 
                 updatePageCountInfo(story.pages.length);
+                updateCurrentPageInfo(story.pages.length);
             } catch (error) {
                 alert('동화책을 불러오는데 실패했습니다.');
             }
@@ -408,16 +421,27 @@ https://example.com/page-03.jpg"
                 return;
             }
 
+            const replace = document.getElementById('replacePages').checked;
+
+            // 확인 메시지
+            if (replace) {
+                if (!confirm(`⚠️ 기존 페이지를 모두 삭제하고 ${urls.length}개의 새 페이지로 교체하시겠습니까?`)) {
+                    return;
+                }
+            }
+
             try {
                 const response = await fetch(`/api/admin/storybooks/${currentEditId}/pages/bulk-images`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ imageUrls: urls })
+                    body: JSON.stringify({ imageUrls: urls, replace: replace })
                 });
 
                 const result = await response.json();
                 if (result.success) {
-                    updatePageCountInfo(result.pagesAdded);
+                    alert(`✅ ${result.message}\n총 ${result.totalPages}개의 페이지가 있습니다.`);
+                    updatePageCountInfo(result.totalPages);
+                    updateCurrentPageInfo(result.totalPages);
                     showStep(3);
                 } else {
                     alert('저장 실패: ' + result.error);
@@ -465,8 +489,26 @@ https://example.com/page-03.jpg"
         // 페이지 수 정보 업데이트
         function updatePageCountInfo(count) {
             const info = document.getElementById('pageCountInfo');
-            info.textContent = `📊 현재 페이지 수: ${count}개`;
-            info.style.color = count > 0 ? '#4CAF50' : '#F44336';
+            if (info) {
+                info.textContent = `📊 현재 페이지 수: ${count}개`;
+                info.style.color = count > 0 ? '#4CAF50' : '#F44336';
+            }
+        }
+
+        // 현재 페이지 정보 업데이트
+        function updateCurrentPageInfo(count) {
+            const info = document.getElementById('currentPageInfo');
+            if (info) {
+                if (count === 0) {
+                    info.innerHTML = '📄 현재 페이지: 없음 (새로 만들어집니다)';
+                    info.style.background = '#E3F2FD';
+                    info.style.color = '#1976D2';
+                } else {
+                    info.innerHTML = `📄 현재 페이지: <strong>${count}개</strong> (체크박스를 선택하면 삭제되고 새로 만들어집니다)`;
+                    info.style.background = '#FFF9E5';
+                    info.style.color = '#F57C00';
+                }
+            }
         }
 
         // 동화책 보기

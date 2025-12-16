@@ -1,66 +1,603 @@
 {
   "id": "story-001",
-  "title": "숲속의 친구들",
-  "author": "김동화",
-  "coverImageUrl": "https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=500",
-  "ageGroup": "3-5세",
-  "tags": ["우정", "자연", "모험"],
-  "description": "숲속에서 만난 다양한 동물 친구들의 우정 이야기",
+  "title": "백설공주",
+  "author": "그림 형제",
+  "coverImageUrl": "https://i.ibb.co/RKpJ93m/0.jpg",
+  "ageGroup": "5-7세",
+  "tags": [
+    "질투심",
+    "선한 마음"
+  ],
+  "pageCount": 58,
+  "isPublished": false,
+  "createdAt": "2025-12-16",
+  "updatedAt": "2025-12-16",
+  "description": "",
   "pages": [
     {
       "pageNumber": 1,
-      "imageUrl": "https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=800",
-      "text": "옛날 옛적, 깊은 숲속에 토끼가 살고 있었어요. 토끼는 매일 아침 산책을 하며 새로운 친구를 만나고 싶어 했답니다.",
+      "imageUrl": "https://i.ibb.co/gMvrL3tQ/1-2.jpg",
+      "text": "",
       "ttsSettings": {
         "voice": "female",
-        "speed": 1.0,
+        "speed": 1,
         "autoPlay": true
       }
     },
     {
       "pageNumber": 2,
-      "imageUrl": "https://images.unsplash.com/photo-1535083783855-76ae62b2914e?w=800",
-      "text": "어느 날 토끼는 숲속을 걷다가 다람쥐를 만났어요. '안녕? 나는 토끼야. 같이 놀래?' 토끼가 물었어요.",
+      "imageUrl": "https://i.ibb.co/Qjh5w03L/2-1.jpg",
+      "text": "",
       "ttsSettings": {
         "voice": "female",
-        "speed": 1.0,
+        "speed": 1,
         "autoPlay": true
       }
     },
     {
       "pageNumber": 3,
-      "imageUrl": "https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=800",
-      "text": "다람쥐는 반가운 마음에 '좋아! 같이 놀자!' 하고 대답했어요. 두 친구는 숲속을 함께 탐험하기로 했답니다.",
+      "imageUrl": "https://i.ibb.co/mVsHz0wC/2-2.jpg",
+      "text": "",
       "ttsSettings": {
         "voice": "female",
-        "speed": 1.0,
+        "speed": 1,
         "autoPlay": true
       }
     },
     {
       "pageNumber": 4,
-      "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800",
-      "text": "숲속을 걷다 보니 사슴도 만나고, 새들도 만났어요. 모두가 친구가 되어 즐거운 시간을 보냈답니다.",
+      "imageUrl": "https://i.ibb.co/jkJSZ01c/3-1.jpg",
+      "text": "",
       "ttsSettings": {
         "voice": "female",
-        "speed": 1.0,
+        "speed": 1,
         "autoPlay": true
       }
     },
     {
       "pageNumber": 5,
-      "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?w=800",
-      "text": "해가 저물 때까지 신나게 놀았어요. '우리 내일도 만나자!' 친구들은 약속하며 각자 집으로 돌아갔답니다. 끝.",
+      "imageUrl": "https://i.ibb.co/chp877WZ/3-2.jpg",
+      "text": "",
       "ttsSettings": {
         "voice": "female",
-        "speed": 1.0,
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 6,
+      "imageUrl": "https://i.ibb.co/yngvnjS7/4-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 7,
+      "imageUrl": "https://i.ibb.co/9HPmhDJs/4-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 8,
+      "imageUrl": "https://i.ibb.co/QvsmCxf8/5-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 9,
+      "imageUrl": "https://i.ibb.co/ch9GScds/5-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 10,
+      "imageUrl": "https://i.ibb.co/NdL96GVb/6-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 11,
+      "imageUrl": "https://i.ibb.co/Q3qVQHZB/6-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 12,
+      "imageUrl": "https://i.ibb.co/G3f3HZnP/7-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 13,
+      "imageUrl": "https://i.ibb.co/nMvdfsbC/7-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 14,
+      "imageUrl": "https://i.ibb.co/Z6GT5PWk/8-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 15,
+      "imageUrl": "https://i.ibb.co/tMjBLSYt/8-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 16,
+      "imageUrl": "https://i.ibb.co/prr59011/9-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 17,
+      "imageUrl": "https://i.ibb.co/Gvvk0Bn3/9-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 18,
+      "imageUrl": "https://i.ibb.co/PzFHGGPR/10-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 19,
+      "imageUrl": "https://i.ibb.co/fz1CFJX6/1-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 20,
+      "imageUrl": "https://i.ibb.co/gMvrL3tQ/1-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 21,
+      "imageUrl": "https://i.ibb.co/Qjh5w03L/2-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 22,
+      "imageUrl": "https://i.ibb.co/mVsHz0wC/2-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 23,
+      "imageUrl": "https://i.ibb.co/jkJSZ01c/3-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 24,
+      "imageUrl": "https://i.ibb.co/chp877WZ/3-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 25,
+      "imageUrl": "https://i.ibb.co/yngvnjS7/4-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 26,
+      "imageUrl": "https://i.ibb.co/9HPmhDJs/4-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 27,
+      "imageUrl": "https://i.ibb.co/QvsmCxf8/5-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 28,
+      "imageUrl": "https://i.ibb.co/ch9GScds/5-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 29,
+      "imageUrl": "https://i.ibb.co/NdL96GVb/6-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 30,
+      "imageUrl": "https://i.ibb.co/Q3qVQHZB/6-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 31,
+      "imageUrl": "https://i.ibb.co/G3f3HZnP/7-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 32,
+      "imageUrl": "https://i.ibb.co/nMvdfsbC/7-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 33,
+      "imageUrl": "https://i.ibb.co/Z6GT5PWk/8-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 34,
+      "imageUrl": "https://i.ibb.co/tMjBLSYt/8-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 35,
+      "imageUrl": "https://i.ibb.co/prr59011/9-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 36,
+      "imageUrl": "https://i.ibb.co/Gvvk0Bn3/9-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 37,
+      "imageUrl": "https://i.ibb.co/PzFHGGPR/10-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 38,
+      "imageUrl": "https://i.ibb.co/qMy1ty9T/10-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 39,
+      "imageUrl": "https://i.ibb.co/fz1CFJX6/1-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 40,
+      "imageUrl": "https://i.ibb.co/gMvrL3tQ/1-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 41,
+      "imageUrl": "https://i.ibb.co/Qjh5w03L/2-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 42,
+      "imageUrl": "https://i.ibb.co/mVsHz0wC/2-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 43,
+      "imageUrl": "https://i.ibb.co/jkJSZ01c/3-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 44,
+      "imageUrl": "https://i.ibb.co/chp877WZ/3-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 45,
+      "imageUrl": "https://i.ibb.co/yngvnjS7/4-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 46,
+      "imageUrl": "https://i.ibb.co/9HPmhDJs/4-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 47,
+      "imageUrl": "https://i.ibb.co/QvsmCxf8/5-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 48,
+      "imageUrl": "https://i.ibb.co/ch9GScds/5-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 49,
+      "imageUrl": "https://i.ibb.co/NdL96GVb/6-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 50,
+      "imageUrl": "https://i.ibb.co/Q3qVQHZB/6-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 51,
+      "imageUrl": "https://i.ibb.co/G3f3HZnP/7-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 52,
+      "imageUrl": "https://i.ibb.co/nMvdfsbC/7-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 53,
+      "imageUrl": "https://i.ibb.co/Z6GT5PWk/8-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 54,
+      "imageUrl": "https://i.ibb.co/tMjBLSYt/8-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 55,
+      "imageUrl": "https://i.ibb.co/prr59011/9-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 56,
+      "imageUrl": "https://i.ibb.co/Gvvk0Bn3/9-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 57,
+      "imageUrl": "https://i.ibb.co/PzFHGGPR/10-1.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 58,
+      "imageUrl": "https://i.ibb.co/qMy1ty9T/10-2.jpg",
+      "text": "",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
         "autoPlay": true
       }
     }
   ],
   "metadata": {
-    "totalPages": 5,
-    "estimatedReadTime": "3분",
+    "totalPages": 58,
+    "estimatedReadTime": "0분",
     "difficulty": "쉬움"
   }
 }

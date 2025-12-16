@@ -195,7 +195,7 @@ app.delete('/api/admin/storybooks/:id', async (req, res) => {
 app.post('/api/admin/storybooks/:id/pages/bulk-images', async (req, res) => {
   try {
     const storyId = req.params.id;
-    const { imageUrls } = req.body;
+    const { imageUrls, replace = false } = req.body;
 
     if (!Array.isArray(imageUrls) || imageUrls.length === 0) {
       return res.status(400).json({ success: false, error: '이미지 URL 배열이 필요합니다.' });
@@ -203,20 +203,35 @@ app.post('/api/admin/storybooks/:id/pages/bulk-images', async (req, res) => {
 
     const story = await readJsonFile(`data/storybooks/${storyId}.json`);
 
-    // 새 페이지 생성
-    const startPageNumber = story.pages.length + 1;
-    const newPages = imageUrls.map((url, index) => ({
-      pageNumber: startPageNumber + index,
-      imageUrl: url,
-      text: '',
-      ttsSettings: {
-        voice: 'female',
-        speed: 1.0,
-        autoPlay: true
-      }
-    }));
+    // replace 옵션이 true면 기존 페이지를 모두 교체, false면 추가
+    if (replace) {
+      // 기존 페이지를 모두 삭제하고 새로 생성
+      story.pages = imageUrls.map((url, index) => ({
+        pageNumber: index + 1,
+        imageUrl: url,
+        text: '',
+        ttsSettings: {
+          voice: 'female',
+          speed: 1.0,
+          autoPlay: true
+        }
+      }));
+    } else {
+      // 기존 페이지에 추가
+      const startPageNumber = story.pages.length + 1;
+      const newPages = imageUrls.map((url, index) => ({
+        pageNumber: startPageNumber + index,
+        imageUrl: url,
+        text: '',
+        ttsSettings: {
+          voice: 'female',
+          speed: 1.0,
+          autoPlay: true
+        }
+      }));
+      story.pages.push(...newPages);
+    }
 
-    story.pages.push(...newPages);
     story.metadata.totalPages = story.pages.length;
     story.pageCount = story.pages.length;
     story.updatedAt = new Date().toISOString().split('T')[0];
@@ -232,7 +247,11 @@ app.post('/api/admin/storybooks/:id/pages/bulk-images', async (req, res) => {
       await writeJsonFile('data/index.json', index);
     }
 
-    res.json({ success: true, pagesAdded: newPages.length, pages: newPages });
+    res.json({ 
+      success: true, 
+      totalPages: story.pages.length,
+      message: replace ? '페이지가 교체되었습니다.' : '페이지가 추가되었습니다.'
+    });
   } catch (error) {
     res.status(500).json({ success: false, error: error.message });
   }
