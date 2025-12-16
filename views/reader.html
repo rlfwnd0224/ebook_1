@@ -99,9 +99,18 @@
         // 동화책 로드
         async function loadStory() {
             const storyId = window.location.pathname.split('/').pop();
+            console.log('📖 동화책 로드 시작:', storyId);
+            
             try {
                 const response = await fetch(`/api/storybooks/${storyId}`);
+                console.log('✅ API 응답 받음:', response.status);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+                
                 currentStory = await response.json();
+                console.log('✅ 동화책 데이터 로드 완료:', currentStory.title, `${currentStory.pages.length}페이지`);
                 
                 document.getElementById('storyTitle').textContent = currentStory.title;
                 document.getElementById('totalPages').textContent = currentStory.pages.length;
@@ -110,19 +119,33 @@
                 const savedProgress = localStorage.getItem(`story-${storyId}-progress`);
                 if (savedProgress) {
                     currentPageIndex = parseInt(savedProgress);
+                    console.log('📚 저장된 진행률:', currentPageIndex);
                 }
                 
                 displayPage(currentPageIndex);
             } catch (error) {
-                document.getElementById('pageText').textContent = '동화책을 불러오는데 실패했습니다 😢';
+                console.error('❌ 동화책 로드 실패:', error);
+                document.getElementById('pageText').textContent = '동화책을 불러오는데 실패했습니다 😢\n' + error.message;
+                alert('동화책을 불러오는데 실패했습니다: ' + error.message);
             }
         }
 
         // 페이지 표시
         function displayPage(index) {
-            if (!currentStory || !currentStory.pages[index]) return;
+            console.log('📄 페이지 표시 시작:', index);
+            
+            if (!currentStory) {
+                console.error('❌ currentStory가 없습니다');
+                return;
+            }
+            
+            if (!currentStory.pages[index]) {
+                console.error('❌ 페이지가 없습니다:', index);
+                return;
+            }
 
             const page = currentStory.pages[index];
+            console.log('✅ 페이지 데이터:', page.pageNumber, page.imageUrl ? '이미지 있음' : '이미지 없음', page.text ? `텍스트 ${page.text.length}자` : '텍스트 없음');
             
             // 이미지 로딩 처리
             const imgElement = document.getElementById('pageImage');
