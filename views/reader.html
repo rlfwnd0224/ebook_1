@@ -113,24 +113,22 @@
             
             // 이미지 URL 유효성 검사 및 로딩
             if (page.imageUrl && page.imageUrl.trim() && page.imageUrl !== '') {
-                imgElement.src = page.imageUrl;
-                
                 // 이미지 로드 성공
                 imgElement.onload = function() {
                     imgElement.style.opacity = '1';
                 };
                 
-                // 이미지 로드 실패
+                // 이미지 로드 실패 - SVG placeholder 사용
                 imgElement.onerror = function() {
                     console.error('이미지 로드 실패:', page.imageUrl);
-                    imgElement.src = 'https://via.placeholder.com/800x600/FFE5F1/FF6B9D?text=' + 
-                                    encodeURIComponent('이미지를 불러올 수 없습니다 😢');
+                    handleImageError(imgElement);
                     imgElement.style.opacity = '1';
                 };
+                
+                imgElement.src = page.imageUrl;
             } else {
-                // URL이 없는 경우
-                imgElement.src = 'https://via.placeholder.com/800x600/E3F2FD/1976D2?text=' + 
-                                encodeURIComponent('이미지가 없습니다');
+                // URL이 없는 경우 - SVG placeholder 사용
+                handleImageError(imgElement);
                 imgElement.style.opacity = '1';
             }
             
