@@ -2,13 +2,13 @@
   "id": "story-001",
   "title": "백설공주",
   "author": "그림 형제",
-  "coverImageUrl": "https://i.ibb.co/RKpJ93m/0.jpg",
+  "coverImageUrl": "https://i.ibb.co/gMvrL3tQ/1-2.jpg",
   "ageGroup": "5-7세",
   "tags": [
     "질투심",
     "선한 마음"
   ],
-  "pageCount": 2,
+  "pageCount": 3,
   "isPublished": true,
   "createdAt": "2025-12-16",
   "updatedAt": "2025-12-16",
@@ -17,7 +17,7 @@
     {
       "pageNumber": 1,
       "imageUrl": "https://i.ibb.co/fz1CFJX6/1-1.jpg",
-      "text": "옛날 옛날, 추운 겨울날이었어. 어느 왕비가 창가에 앉아 바느질을 하고 있었지. \"눈처럼 하얀 피부, 피처럼 붉은 입술, 흑단나무처럼 검은 머리를 가진 아이가 태어났으면 좋겠어.\"",
+      "text": "121",
       "ttsSettings": {
         "voice": "female",
         "speed": 1,
@@ -27,7 +27,17 @@
     {
       "pageNumber": 2,
       "imageUrl": "https://i.ibb.co/gMvrL3tQ/1-2.jpg",
-      "text": "왕비의 소원대로 예쁜 공주가 태어났어. 공주의 이름은 '백설공주'였단다. 하지만 슬프게도 왕비는 얼마 후 세상을 떠나고 말았어.",
+      "text": "111",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 3,
+      "imageUrl": "https://i.ibb.co/gMvrL3tQ/1-2.jpg",
+      "text": "111",
       "ttsSettings": {
         "voice": "female",
         "speed": 1,
@@ -36,7 +46,7 @@
     }
   ],
   "metadata": {
-    "totalPages": 2,
+    "totalPages": 3,
     "estimatedReadTime": "0분",
     "difficulty": "쉬움"
   }
