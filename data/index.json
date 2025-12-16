@@ -46,7 +46,66 @@
       "isPublished": true,
       "createdAt": "2025-12-16",
       "updatedAt": "2025-12-16"
+    },
+    {
+      "id": "story-004",
+      "title": "미녀와 야수",
+      "author": "보몽 부인",
+      "coverImageUrl": "https://i.ibb.co/QvCKW9NV/0.jpg",
+      "ageGroup": "5-7세",
+      "tags": [
+        "내면의 아름다움",
+        "진정한 사랑"
+      ],
+      "pageCount": 18,
+      "isPublished": true,
+      "createdAt": "2025-12-16",
+      "updatedAt": "2025-12-16"
+    },
+    {
+      "id": "story-005",
+      "title": "라푼젤",
+      "author": "그림 형제",
+      "coverImageUrl": "https://i.ibb.co/Zp5rn0WP/0.jpg",
+      "ageGroup": "5-7세",
+      "tags": [
+        "자유와 진실한 사랑"
+      ],
+      "pageCount": 20,
+      "isPublished": true,
+      "createdAt": "2025-12-16",
+      "updatedAt": "2025-12-16"
+    },
+    {
+      "id": "story-006",
+      "title": "빨간 모자",
+      "author": "샤를 페로",
+      "coverImageUrl": "https://i.ibb.co/WqqqfQn/0.jpg",
+      "ageGroup": "5-7세",
+      "tags": [
+        "위험 인식",
+        "부모님 말씀",
+        "용기"
+      ],
+      "pageCount": 20,
+      "isPublished": true,
+      "createdAt": "2025-12-16",
+      "updatedAt": "2025-12-16"
+    },
+    {
+      "id": "story-007",
+      "title": "헨젤과 그레텔",
+      "author": "그림 형제",
+      "coverImageUrl": "https://i.ibb.co/vf85ckZ/0.jpg",
+      "ageGroup": "5-7세",
+      "tags": [
+        "남매의 협동과 용기"
+      ],
+      "pageCount": 20,
+      "isPublished": true,
+      "createdAt": "2025-12-16",
+      "updatedAt": "2025-12-16"
     }
   ],
-  "lastUpdated": "2025-12-16T07:49:44.015Z"
+  "lastUpdated": "2025-12-16T10:01:03.901Z"
 }

@@ -1,0 +1,222 @@
+{
+  "id": "story-005",
+  "title": "라푼젤",
+  "author": "그림 형제",
+  "coverImageUrl": "https://i.ibb.co/Zp5rn0WP/0.jpg",
+  "ageGroup": "5-7세",
+  "tags": [
+    "자유와 진실한 사랑"
+  ],
+  "pageCount": 20,
+  "isPublished": true,
+  "createdAt": "2025-12-16",
+  "updatedAt": "2025-12-16",
+  "description": "아르누보 스타일",
+  "pages": [
+    {
+      "pageNumber": 1,
+      "imageUrl": "https://i.ibb.co/Sw1h3658/1-1.jpg",
+      "text": "옛날 옛날, 한 부부가 살았어요. 아내가 아기를 기다리고 있었지요. 어느 날, 아내가 창밖을 보다가 말했어요. \"저 정원의 라푼젤 채소가 먹고 싶어요. 너무너무 먹고 싶어요!\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 2,
+      "imageUrl": "https://i.ibb.co/TqmqL0pb/1-2.jpg",
+      "text": "그 정원은 무서운 마녀의 것이었어요. 하지만 남편은 아내를 위해 담장을 넘었답니다. 살금살금, 남편은 라푼젤 채소를 몰래 따서 집으로 돌아왔어요.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 3,
+      "imageUrl": "https://i.ibb.co/Kz5JvzNT/2-1.jpg",
+      "text": "다음 날 밤, 남편이 또 정원에 들어갔을 때였어요. 갑자기 마녀가 나타났지요! \"감히 내 정원에서 채소를 훔쳐가다니!\" 마녀가 무섭게 소리쳤어요.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 4,
+      "imageUrl": "https://i.ibb.co/0y54kYSG/2-2.jpg",
+      "text": "\"용서해 주세요! 아내가 아파서 어쩔 수 없었어요.\" 남편이 빌었어요. \"좋아. 대신 태어날 아기를 내게 주어야 해!\" 마녀가 말했어요. 남편은 어쩔 수 없이 약속했답니다.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 5,
+      "imageUrl": "https://i.ibb.co/BK5SSVPg/3-1.jpg",
+      "text": "아기가 태어나자 마녀가 나타났어요. \"약속대로 이 아이는 내 것이야!\" 마녀는 아기를 데려가 '라푼젤'이라는 이름을 지어주었어요. 라푼젤은 아름답게 자랐답니다.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 6,
+      "imageUrl": "https://i.ibb.co/xt1v5B5T/3-2.jpg",
+      "text": "라푼젤이 열두 살이 되었을 때, 마녀는 라푼젤을 높은 탑에 가두었어요. 탑에는 문도 없고 계단도 없었답니다. 라푼젤은 창문으로만 밖을 볼 수 있었어요.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 7,
+      "imageUrl": "https://i.ibb.co/PvyRr2XC/4-1.jpg",
+      "text": "라푼젤은 금빛 머리카락이 아주아주 길었어요. 마녀가 올 때마다 소리쳤지요. \"라푼젤, 라푼젤! 머리카락을 내려다오!\" 그러면 라푼젤은 긴 머리카락을 창문 밖으로 내렸어요.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 8,
+      "imageUrl": "https://i.ibb.co/GfZWXWG5/4-2.jpg",
+      "text": "마녀는 라푼젤의 머리카락을 타고 탑 위로 올라갔어요. 쭉쭉쭉, 머리카락을 잡고 올라갔답니다. 라푼젤은 매일 혼자서 노래를 부르며 지냈어요.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 9,
+      "imageUrl": "https://i.ibb.co/k2W59wcG/5-1.jpg",
+      "text": "어느 날, 왕자가 숲을 지나다가 아름다운 노래를 들었어요. \"이 목소리는 누구의 것일까?\" 왕자는 노래 소리를 따라가 탑을 발견했답니다.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 10,
+      "imageUrl": "https://i.ibb.co/qY3PLYxy/5-2.jpg",
+      "text": "왕자는 숨어서 마녀를 지켜보았어요. \"라푼젤, 라푼젤! 머리카락을 내려다오!\" 마녀가 머리카락을 타고 올라가는 걸 본 왕자는 비밀을 알게 되었답니다.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 11,
+      "imageUrl": "https://i.ibb.co/MyhNVggf/6-1.jpg",
+      "text": "다음 날, 왕자는 탑 아래로 찾아왔어요. \"라푼젤, 라푼젤! 머리카락을 내려다오!\" 왕자가 마녀처럼 외쳤어요.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 12,
+      "imageUrl": "https://i.ibb.co/vx9y3Hgv/6-2.jpg",
+      "text": "라푼젤은 처음 보는 젊은 남자에게 깜짝 놀랐어요. 하지만 왕자는 친절했답니다. \"당신의 노래가 너무 아름다워요.\" 왕자가 말했어요. 라푼젤은 수줍게 미소 지었지요.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 13,
+      "imageUrl": "https://i.ibb.co/n8Rv5JxH/7-1.jpg",
+      "text": "왕자는 매일 탑을 찾아왔어요. 라푼젤과 왕자는 서로 사랑하게 되었답니다. \"함께 이곳을 떠나요.\" 왕자가 제안했어요. \"실크 사다리를 만들어 올게요.\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 14,
+      "imageUrl": "https://i.ibb.co/wNXcDxZj/7-2.jpg",
+      "text": "그런데 어느 날, 라푼젤이 실수로 말했어요. \"마녀님은 왕자님보다 무겁네요.\" \"뭐라고?!\" 마녀는 화가 나서 가위를 집어들었어요. \"배신자!\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 15,
+      "imageUrl": "https://i.ibb.co/sJXvjRf8/8-1.jpg",
+      "text": "싹둑싹둑! 마녀는 라푼젤의 아름다운 머리카락을 잘라버렸어요. 금빛 머리카락이 바닥에 떨어졌어요. 라푼젤은 눈물을 흘렸답니다.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 16,
+      "imageUrl": "https://i.ibb.co/1tmfCqD1/8-2.jpg",
+      "text": "\"이제 너는 왕자를 다시 볼 수 없을 거야!\" 마녀는 라푼젤을 멀고 먼 사막으로 쫓아냈어요. 라푼젤은 외롭게 사막을 헤매야 했답니다.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 17,
+      "imageUrl": "https://i.ibb.co/4gTx9Z05/9-1.jpg",
+      "text": "그날 저녁, 왕자가 탑을 찾아왔어요. 하지만 창문에서 기다리는 건 마녀였답니다! \"라푼젤은 없어! 너는 그녀를 다시 못 볼 거야!\" 마녀가 비웃었어요.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 18,
+      "imageUrl": "https://i.ibb.co/twqXfkG6/9-2.jpg",
+      "text": "왕자는 슬픔에 빠져 뒤로 물러서다가 탑에서 떨어졌어요! 가시덤불이 왕자의 눈을 찔렀어요. 왕자는 앞을 볼 수 없게 되었답니다.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 19,
+      "imageUrl": "https://i.ibb.co/mrgJ1smr/10-1.jpg",
+      "text": "왕자는 여러 해 동안 사막을 헤매며 라푼젤을 찾았어요. 어느 날, 왕자는 익숙한 노래 소리를 들었어요. \"이 목소리는... 라푼젤!\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 20,
+      "imageUrl": "https://i.ibb.co/svGZ6gQW/10-2.jpg",
+      "text": "라푼젤은 왕자를 꼭 안고 기쁨의 눈물을 흘렸어요. 라푼젤의 눈물이 왕자의 눈에 떨어졌지요. 그 순간! 왕자의 눈이 다시 보이게 되었어요. \"라푼젤!\" 두 사람은 다시 만나 행복하게 살았답니다!",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    }
+  ],
+  "metadata": {
+    "totalPages": 20,
+    "estimatedReadTime": "0분",
+    "difficulty": "쉬움"
+  }
+}

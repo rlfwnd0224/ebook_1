@@ -1,0 +1,224 @@
+{
+  "id": "story-006",
+  "title": "빨간 모자",
+  "author": "샤를 페로",
+  "coverImageUrl": "https://i.ibb.co/WqqqfQn/0.jpg",
+  "ageGroup": "5-7세",
+  "tags": [
+    "위험 인식",
+    "부모님 말씀",
+    "용기"
+  ],
+  "pageCount": 20,
+  "isPublished": true,
+  "createdAt": "2025-12-16",
+  "updatedAt": "2025-12-16",
+  "description": "귀스타브 도레 스타일\n극적이고 세밀한, 명암 대비",
+  "pages": [
+    {
+      "pageNumber": 1,
+      "imageUrl": "https://i.ibb.co/YBwVSP2q/1-8.jpg",
+      "text": "옛날 옛날, 작은 마을에 사랑스러운 소녀가 살았어. 할머니가 만들어주신 빨간 모자를 늘 쓰고 다녔지. 모두가 그 소녀를 '빨간 모자'라고 불렀어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 2,
+      "imageUrl": "https://i.ibb.co/SDW7Q9Yj/1-2.jpg",
+      "text": "빨간 모자는 착하고 예의 바른 아이였어. 지나가는 사람들에게 늘 반갑게 인사했지. \"안녕하세요!\" \"좋은 하루 보내세요!\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 3,
+      "imageUrl": "https://i.ibb.co/mCWwJcpn/2-1.jpg",
+      "text": "어느 날, 엄마가 빨간 모자를 불렀어. \"할머니가 편찮으시단다. 이 음식을 갖다 드려라.\" 바구니에는 빵과 과일, 따뜻한 수프가 들어 있었어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 4,
+      "imageUrl": "https://i.ibb.co/Wbg4RQJ/2-2.jpg",
+      "text": "\"숲길로 가되, 절대 낯선 사람과 말하면 안 돼.\" \"길에서 놀지 말고 곧장 가야 해. 알았지?\" \"네, 엄마! 조심할게요.\" 빨간 모자는 바구니를 들고 출발했어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 5,
+      "imageUrl": "https://i.ibb.co/nM3GSXqB/3-1.jpg",
+      "text": "빨간 모자는 숲속 길을 걸어갔어. 새들이 지저귀고 나비들이 날아다녔어. \"할머니 집까지 조금만 더!\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 6,
+      "imageUrl": "https://i.ibb.co/HT0hw3yc/3-2.jpg",
+      "text": "그때였어! 큰 늑대 한 마리가 나타났어. \"안녕, 귀여운 아가씨. 어디 가니?\" 빨간 모자는 깜짝 놀랐어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 7,
+      "imageUrl": "https://i.ibb.co/TBKDSTdq/4-1.jpg",
+      "text": "빨간 모자는 엄마 말씀을 잊고 대답했어. \"아픈 할머니께 음식을 갖다 드려요.\" \"할머니 집은 저 너머 숲속에 있어요.\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 8,
+      "imageUrl": "https://i.ibb.co/BVgxn3js/4-2.jpg",
+      "text": "늑대가 교활하게 말했어. \"저기 예쁜 꽃들이 많구나. 할머니께 꽃을 따다 드리면 좋아하실 거야.\" \"그래요? 그럼 꽃을 좀 따야겠어요!\" 빨간 모자는 꽃밭으로 갔어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 9,
+      "imageUrl": "https://i.ibb.co/2YvxcjNT/5-1.jpg",
+      "text": "늑대는 빨간 모자가 꽃을 따는 동안 재빨리 달려갔어. 늑대는 지름길을 알고 있었거든. 할머니 집에 먼저 도착한 늑대는 문을 두드렸어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 10,
+      "imageUrl": "https://i.ibb.co/JFGnv57B/5-2.jpg",
+      "text": "늑대는 할머니를 벽장에 가두고 할머니 옷을 입었어. 그리고 할머니 침대에 누워 이불을 뒤집어썼지. \"이제 빨간 모자만 오면 돼... 크크크.\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 11,
+      "imageUrl": "https://i.ibb.co/k6gssjTy/6-1.jpg",
+      "text": "한참 후, 빨간 모자가 도착했어. \"할머니, 음식 가져왔어요! 예쁜 꽃도 따왔어요.\" 빨간 모자는 침대 옆으로 다가갔어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 12,
+      "imageUrl": "https://i.ibb.co/jPBMX7YL/6-2.jpg",
+      "text": "\"할머니, 귀가 왜 그렇게 커요?\" \"너의 말을 잘 듣기 위해서란다.\" \"눈은 왜 그렇게 커요?\" \"너를 잘 보기 위해서지.\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 13,
+      "imageUrl": "https://i.ibb.co/hR581frW/7-1.jpg",
+      "text": "\"손은 왜 그렇게 커요?\" \"너를 꼭 안아주기 위해서란다.\" \"입은... 입은 왜 그렇게 커요?\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 14,
+      "imageUrl": "https://i.ibb.co/5ghm40c8/7-2.jpg",
+      "text": "\"너를 먹기 위해서야!\" 늑대가 이불을 벗고 벌떡 일어났어! \"으악!\" 빨간 모자는 비명을 질렀어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 15,
+      "imageUrl": "https://i.ibb.co/nNPFGXw2/8-1.jpg",
+      "text": "바로 그때! 지나가던 사냥꾼이 비명소리를 들었어. 사냥꾼은 재빨리 문을 열고 들어왔어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 16,
+      "imageUrl": "https://i.ibb.co/8g4wm7Ym/8-2.jpg",
+      "text": "\"이 나쁜 늑대 같으니!\" 사냥꾼은 용감하게 늑대와 맞섰어. 늑대는 도망치려 했지만, 사냥꾼은 늑대를 꼼짝 못하게 했어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 17,
+      "imageUrl": "https://i.ibb.co/QFd9Qc7z/9-1.jpg",
+      "text": "사냥꾼은 벽장에 갇힌 할머니를 구해냈어. \"할머니!\" 빨간 모자가 달려가 할머니를 꼭 안았어. \"괜찮으시죠? 정말 죄송해요...\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 18,
+      "imageUrl": "https://i.ibb.co/q3xmqYDm/9-2.jpg",
+      "text": "늑대는 다시는 나타나지 않았어. 할머니와 빨간 모자, 사냥꾼은 함께 맛있는 음식을 먹었어. \"고마워요, 사냥꾼 아저씨!\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 19,
+      "imageUrl": "https://i.ibb.co/0p7G5RBg/10-1.jpg",
+      "text": "빨간 모자는 엄마 말씀을 듣지 않은 것을 깊이 반성했어. \"낯선 사람과 말하지 말라고 하셨는데... 정말 미안해요.\" \"길에서 놀지도 말았어야 했어요.\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 20,
+      "imageUrl": "https://i.ibb.co/fzGL52sH/10-2.jpg",
+      "text": "그 뒤로 빨간 모자는 절대 낯선 사람과 말하지 않았어. 엄마 말씀을 항상 잘 듣는 착한 아이가 되었단다. 여러분도 항상 조심하고, 부모님 말씀을 잘 들어야 해요!",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    }
+  ],
+  "metadata": {
+    "totalPages": 20,
+    "estimatedReadTime": "0분",
+    "difficulty": "쉬움"
+  }
+}
