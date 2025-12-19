@@ -1,0 +1,224 @@
+{
+  "id": "story-002",
+  "title": "신데렐라",
+  "author": "샤를 페로",
+  "coverImageUrl": "https://i.ibb.co/tPvHLGjR/0.png",
+  "ageGroup": "5-7세",
+  "tags": [
+    "인내심",
+    "희망",
+    "선한 마음"
+  ],
+  "pageCount": 20,
+  "isPublished": true,
+  "createdAt": "2025-12-16",
+  "updatedAt": "2025-12-16",
+  "description": "라파엘로 스타일. \n우아하고 고전적, 조화로운 구도, 신성한 빛.",
+  "pages": [
+    {
+      "pageNumber": 1,
+      "imageUrl": "https://i.ibb.co/gMPV6BFV/1-1.png",
+      "text": "옛날 옛날, 착한 소녀가 살고 있었어. 소녀의 아버지가 새 엄마를 맞이했는데, 새엄마는 두 딸을 데려왔지. 새엄마와 의붓언니들은 욕심이 많고 심술궂었어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 2,
+      "imageUrl": "https://i.ibb.co/65k1Jwp/1-2.png",
+      "text": "소녀는 아침부터 저녁까지 온갖 집안일을 했어. 요리하고, 청소하고, 빨래하고... 쉴 틈이 없었지. 늘 재투성이가 되어서 사람들은 소녀를 '신데렐라'라고 불렀어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 3,
+      "imageUrl": "https://i.ibb.co/60HfgP2h/2-1.png",
+      "text": "어느 날, 왕궁에서 초대장이 날아왔어. \"왕자님의 무도회에 모든 아가씨를 초대합니다!\" 의붓언니들은 신이 나서 펄쩍펄쩍 뛰었어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 4,
+      "imageUrl": "https://i.ibb.co/jk0BQxgP/2-2.png",
+      "text": "신데렐라는 언니들의 드레스를 다리고 머리를 빗겨줬어. \"나도 무도회에 가고 싶어...\" \"너? 누더기를 입은 네가? 하하하!\" 언니들은 신데렐라를 비웃으며 떠나버렸어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 5,
+      "imageUrl": "https://i.ibb.co/HLCbcWp7/3-1.png",
+      "text": "신데렐라는 정원에 나가 엉엉 울었어. \"나도 무도회에 가고 싶은데... 예쁜 드레스도 없고...\" 그때였어!",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 6,
+      "imageUrl": "https://i.ibb.co/1G22ZwJv/3-2.png",
+      "text": "반짝반짝! 환한 빛과 함께 요정 대모가 나타났어. \"울지 마, 신데렐라. 내가 도와줄게.\" \"요정님?\" 신데렐라는 깜짝 놀라 눈을 동그랗게 떴어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 7,
+      "imageUrl": "https://i.ibb.co/Z0T1SpV/4-1.png",
+      "text": "\"호박 하나를 가져오렴.\" 요정 대모가 지팡이를 휘두르자 호박이 황금빛 마차로 변했어! 쥐들은 멋진 말이 되었고, 쥐덫에 있던 쥐는 마부가 되었단다.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 8,
+      "imageUrl": "https://i.ibb.co/xZxRqpZ/4-2.png",
+      "text": "요정 대모가 다시 지팡이를 휘두르자 신데렐라의 누더기가 환한 드레스로 변했어! 발에는 반짝반짝 빛나는 유리 구두가 신겨졌지. \"와! 꿈같아요!\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 9,
+      "imageUrl": "https://i.ibb.co/h1XtQkZf/5-1.png",
+      "text": "요정 대모가 신데렐라에게 말했어. \"한 가지만 기억해. 자정 열두 시 전에 꼭 돌아와야 해.\" \"열두 시가 되면 마법이 다 풀려버릴 거야.\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 10,
+      "imageUrl": "https://i.ibb.co/v6Wx9FXv/5-2.png",
+      "text": "\"알겠어요! 감사합니다, 요정님!\" 신데렐라는 황금 마차를 타고 왕궁으로 향했어. 마음이 두근두근 설렜어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 11,
+      "imageUrl": "https://i.ibb.co/mVtZ5HJb/6-1.png",
+      "text": "신데렐라가 무도회장에 들어서자 모두가 숨을 멈췄어. \"저 아름다운 공주님은 누구실까?\" 왕자도 신데렐라를 보고 깜짝 놀랐어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 12,
+      "imageUrl": "https://i.ibb.co/gFXJRFCY/6-2.png",
+      "text": "\"저와 함께 춤춰주시겠어요?\" 왕자는 신데렐라의 손을 잡았어. 두 사람은 밤새 춤을 췄어. 신데렐라는 너무너무 행복했어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 13,
+      "imageUrl": "https://i.ibb.co/fz5Hqb6k/7-1.png",
+      "text": "땡! 땡! 땡! 그때 시계탑에서 열두 시를 알리는 종소리가 울렸어. \"어머, 벌써 열두 시!\" 신데렐라는 깜짝 놀라 황급히 달아났어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 14,
+      "imageUrl": "https://i.ibb.co/q3WmxSmK/7-2.png",
+      "text": "\"기다리세요!\" 왕자가 외쳤지만 신데렐라는 계속 달렸어. 그러다 계단에서 유리 구두 한 짝이 벗겨지고 말았어. 하지만 신데렐라는 멈출 수 없었어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 15,
+      "imageUrl": "https://i.ibb.co/WpMWK3Qz/8-1.png",
+      "text": "왕자는 계단에 남은 유리 구두를 주웠어. \"이 구두의 주인을 꼭 찾아야 해!\" 왕자는 나라의 모든 아가씨들에게 구두를 신겨보기로 했어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 16,
+      "imageUrl": "https://i.ibb.co/Vcd7S6KM/8-2.png",
+      "text": "신하들이 집집마다 찾아다녔어. 하지만 아무도 그 작은 유리 구두를 신을 수 없었어. 의붓언니들도 발을 우겨넣어봤지만 소용없었지.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 17,
+      "imageUrl": "https://i.ibb.co/1fwRLLz5/9-1.png",
+      "text": "\"저도 한번 신어봐도 될까요?\" 신데렐라가 부엌에서 나와 조심스럽게 물었어. \"네가? 하하하!\" 의붓언니들이 비웃었지만, 신하는 고개를 끄덕였어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 18,
+      "imageUrl": "https://i.ibb.co/nNH29xw5/9-2.png",
+      "text": "신데렐라가 유리 구두를 신자 발에 딱 맞았어! 그리고 주머니에서 다른 한 짝을 꺼냈지. \"바로 당신이었군요!\" 모두가 깜짝 놀랐어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 19,
+      "imageUrl": "https://i.ibb.co/XZ7tPgGV/10-1.png",
+      "text": "왕자는 신데렐라를 꼭 안아줬어. \"당신을 찾았어요! 영원히 함께해요.\" 요정 대모도 나타나 축복해줬어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 20,
+      "imageUrl": "https://i.ibb.co/kggHsYWy/10-2.png",
+      "text": "신데렐라와 왕자는 성대한 결혼식을 올렸어. 신데렐라는 착한 마음을 잃지 않고 모두를 용서했어. 그리고 두 사람은 행복하게 오래오래 살았단다.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    }
+  ],
+  "metadata": {
+    "totalPages": 20,
+    "estimatedReadTime": "0분",
+    "difficulty": "쉬움"
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "id": "story-004",
+  "title": "미녀와 야수",
+  "author": "보몽 부인",
+  "coverImageUrl": "https://i.ibb.co/QvCKW9NV/0.jpg",
+  "ageGroup": "5-7세",
+  "tags": [
+    "내면의 아름다움",
+    "진정한 사랑"
+  ],
+  "pageCount": 18,
+  "isPublished": true,
+  "createdAt": "2025-12-16",
+  "updatedAt": "2025-12-16",
+  "description": "로코코 양식.\n우아하고 섬세한, 부드러운 곡선, 화려한 장식.",
+  "pages": [
+    {
+      "pageNumber": 1,
+      "imageUrl": "https://i.ibb.co/bMtwwQPj/1-1.jpg",
+      "text": "옛날 옛날, 부유한 상인에게는 세 딸이 있었어. 막내딸 벨은 아름다울 뿐 아니라 마음도 착했지.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 2,
+      "imageUrl": "https://i.ibb.co/84c0dtVd/1-2.jpg",
+      "text": "어느 날 상인은 재산을 모두 잃고 말았어. 돌아오는 길에 겨울 숲에서 길을 잃은 상인은 신비한 성을 발견했단다.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 3,
+      "imageUrl": "https://i.ibb.co/Lhv0SpTD/2-1.jpg",
+      "text": "성 안에는 따뜻한 음식이 준비되어 있었어. 아침에 떠나려던 상인은 정원에서 장미를 발견했어. \"벨이 좋아하는 장미를 한 송이 꺾어가야지.\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 4,
+      "imageUrl": "https://i.ibb.co/3DphNKc/2-2.jpg",
+      "text": "\"으르렁! 내 장미를 꺾다니! 너는 죽어야 해!\" 무시무시한 야수가 나타났어. \"딸 중 하나가 대신 와야 한다!\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 5,
+      "imageUrl": "https://i.ibb.co/8n6GwpJJ/3-1.jpg",
+      "text": "집으로 돌아온 아버지는 슬픈 얼굴로 이야기를 들려줬어. \"아버지, 제가 가겠어요.\" 벨은 용감하게 말했단다.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 6,
+      "imageUrl": "https://i.ibb.co/C3Cz7144/3-2.jpg",
+      "text": "\"안 돼, 벨!\" 아버지는 눈물을 흘렸어. 하지만 벨은 성으로 향했어. \"두렵지만... 용기를 내야 해.\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 7,
+      "imageUrl": "https://i.ibb.co/qMj1C4Tn/4-1.jpg",
+      "text": "성 안은 상상했던 것과 완전히 달랐어. 벨을 위한 방은 궁전처럼 아름다웠단다. \"이게 다 나를 위한 거야?\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 8,
+      "imageUrl": "https://i.ibb.co/NgSLXG2X/4-2.jpg",
+      "text": "저녁이 되자 야수가 나타났어. \"무서워하지 마. 나는 너를 해치지 않을 거야.\" 야수의 목소리는 무서웠지만, 눈에는 슬픔이 가득했어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 9,
+      "imageUrl": "https://i.ibb.co/G3Vvwd9f/5-1.jpg",
+      "text": "매일 저녁 야수는 벨과 식사를 했어. 마법의 접시들이 저절로 움직였지. \"오늘은 어떻게 지냈니?\" 야수가 물었어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 10,
+      "imageUrl": "https://i.ibb.co/qMpTZQ76/5-2.jpg",
+      "text": "날이 갈수록 벨과 야수는 가까워졌어. 함께 책을 읽고 이야기를 나눴단다. \"야수님도 저처럼 책을 좋아하시는구나.\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 11,
+      "imageUrl": "https://i.ibb.co/ZzzqvtJV/6-1.jpg",
+      "text": "어느 날 야수는 마법 거울을 보여줬어. 거울에 아버지가 보였어. 아버지는 아파 보였지. \"아버지!\" 벨은 눈물을 흘렸어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 12,
+      "imageUrl": "https://i.ibb.co/Sgv4sHL/6-2.jpg",
+      "text": "\"벨... 아버지를 보러 가렴.\" \"하지만 일주일 안에 꼭 돌아와야 해.\" 야수는 마법 반지를 건네줬어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 13,
+      "imageUrl": "https://i.ibb.co/gZ3y7qYD/7-1.jpg",
+      "text": "벨은 약속을 잊고 있었어. 어느 날 밤 무서운 꿈을 꾸었어. 꿈속에서 야수는 장미 정원에 쓰러져 있었어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 14,
+      "imageUrl": "https://i.ibb.co/vxLwHZHc/7-2.jpg",
+      "text": "벨은 급히 성으로 돌아왔어. 장미 정원에 야수가 쓰러져 있었어! \"야수님! 일어나세요!\" 벨은 눈물을 흘렸단다.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 15,
+      "imageUrl": "https://i.ibb.co/LXZhRvXd/8-1.jpg",
+      "text": "\"야수님... 사랑해요.\" \"당신과 함께 있고 싶어요.\" 벨은 야수의 손을 꼭 잡았어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 16,
+      "imageUrl": "https://i.ibb.co/s9CB4mcK/8-2.jpg",
+      "text": "놀라운 일이 일어났어! 황금빛이 퍼지며 마법이 풀렸지. 빛이 사라지자 잘생긴 왕자가 서 있었어!",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 17,
+      "imageUrl": "https://i.ibb.co/dJbkdp3d/9-1.jpg",
+      "text": "\"당신의 사랑이 마법을 풀었어.\" \"겉모습이 아닌 진짜 나를 사랑해준 건 너뿐이야.\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 18,
+      "imageUrl": "https://i.ibb.co/x8Cs5nh0/9-2.jpg",
+      "text": "벨과 왕자는 아름다운 결혼식을 올렸어. 두 사람은 행복하게 오래오래 살았단다. 장미 정원은 언제까지나 아름답게 피어 있었어.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    }
+  ],
+  "metadata": {
+    "totalPages": 18,
+    "estimatedReadTime": "0분",
+    "difficulty": "쉬움"
+  }
+}

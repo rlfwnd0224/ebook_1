@@ -15,16 +15,34 @@ app.use('/data', express.static('data'));
 
 // Helper functions
 async function readJsonFile(filePath) {
-  const data = await fs.readFile(path.join(__dirname, filePath), 'utf-8');
-  return JSON.parse(data);
+  try {
+    // Vercel 환경에서는 public 폴더 우선 시도
+    const publicPath = path.join(__dirname, 'public', filePath);
+    const data = await fs.readFile(publicPath, 'utf-8');
+    return JSON.parse(data);
+  } catch (error) {
+    // 로컬 환경에서는 기존 경로 시도
+    const data = await fs.readFile(path.join(__dirname, filePath), 'utf-8');
+    return JSON.parse(data);
+  }
 }
 
 async function writeJsonFile(filePath, data) {
-  await fs.writeFile(
-    path.join(__dirname, filePath),
-    JSON.stringify(data, null, 2),
-    'utf-8'
-  );
+  try {
+    // public 폴더에 쓰기 시도
+    const publicPath = path.join(__dirname, 'public', filePath);
+    await fs.writeFile(publicPath, JSON.stringify(data, null, 2), 'utf-8');
+    
+    // 기존 경로에도 쓰기 (로컬 환경 호환)
+    await fs.writeFile(
+      path.join(__dirname, filePath),
+      JSON.stringify(data, null, 2),
+      'utf-8'
+    );
+  } catch (error) {
+    console.error('Write error:', error.message);
+    throw error;
+  }
 }
 
 function generateStoryId(existingIds) {
