@@ -121,8 +121,8 @@
             border-radius: 10px;
             cursor: pointer;
             position: relative;
-            transform-style: preserve-3d;
-            transition: transform 0.6s;
+            /* transform-style 제거 - 3D 회전 사용 안 함 */
+            transition: all 0.3s ease;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
@@ -131,11 +131,11 @@
         }
 
         .card.flipped {
-            transform: rotateY(180deg);
+            /* 3D 회전 제거 */
         }
 
         .card.flipped:hover {
-            transform: rotateY(180deg);
+            transform: scale(1);
         }
 
         .card.matched {
@@ -147,7 +147,6 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            /* backface-visibility 제거 - 테스트 */
             border-radius: 10px;
             display: flex;
             flex-direction: column;
@@ -155,32 +154,34 @@
             justify-content: center;
             padding: 15px;
             box-sizing: border-box;
+            transition: opacity 0.3s ease;
         }
 
         .card-front {
             background: linear-gradient(135deg, #FF6B9D 0%, #FFA500 100%);
             color: white;
-            transform: rotateY(0deg);
             z-index: 2;
+            opacity: 1;
         }
 
         .card.flipped .card-front {
             z-index: 0;
-            opacity: 0; /* 완전히 숨기기 */
+            opacity: 0;
             pointer-events: none;
         }
 
         .card-back {
             background: white;
-            border: 3px solid #FF6B9D; /* 테두리 강조 */
-            transform: rotateY(180deg);
+            border: 3px solid #FF6B9D;
             z-index: 1;
+            opacity: 0;
+            pointer-events: none;
         }
 
         .card.flipped .card-back {
             z-index: 3;
             opacity: 1;
-            transform: rotateY(0deg); /* 정면으로 회전 */
+            pointer-events: auto;
         }
 
         .card-back .card-text {
