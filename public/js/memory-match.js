@@ -112,7 +112,11 @@ function renderCards() {
     const cardGrid = document.getElementById('cardGrid');
     cardGrid.innerHTML = '';
 
+    console.log('🎴 카드 렌더링 시작:', gameState.cards.length, '개');
+
     gameState.cards.forEach((card, index) => {
+        console.log(`카드 ${index}:`, card.type, card.content);
+
         const cardElement = document.createElement('div');
         cardElement.className = 'card';
         cardElement.dataset.index = index;
@@ -128,31 +132,46 @@ function renderCards() {
         cardBack.className = 'card-face card-back';
         
         if (card.type === 'word') {
-            cardBack.innerHTML = `<div class="card-text">${card.content}</div>`;
+            cardBack.innerHTML = `<div class="card-text" style="font-size: 24px; font-weight: 700; color: #333;">${card.content}</div>`;
+            console.log(`✍️ 단어 카드: ${card.content}`);
         } else {
             cardBack.innerHTML = `
-                <img src="${card.content}" alt="${card.meaning}" class="card-image" />
-                <div class="card-text" style="font-size: 14px; color: #666;">${card.meaning}</div>
+                <img src="${card.content}" alt="${card.meaning}" class="card-image" onerror="console.error('이미지 로드 실패:', this.src)" onload="console.log('이미지 로드 성공:', this.src)" />
+                <div class="card-text" style="font-size: 14px; color: #666; margin-top: 5px;">${card.meaning}</div>
             `;
+            console.log(`🖼️ 이미지 카드: ${card.meaning}`);
         }
 
         cardElement.appendChild(cardFront);
         cardElement.appendChild(cardBack);
         cardGrid.appendChild(cardElement);
     });
+
+    console.log('✅ 카드 렌더링 완료');
 }
 
 // 카드 뒤집기
 function flipCard(index) {
+    console.log('🔄 카드 클릭:', index);
+    
     // 처리 중이거나, 이미 뒤집힌 카드거나, 매칭된 카드면 무시
-    if (gameState.isProcessing) return;
+    if (gameState.isProcessing) {
+        console.log('⏸️ 처리 중...');
+        return;
+    }
     
     const cardElement = document.querySelectorAll('.card')[index];
-    if (cardElement.classList.contains('flipped') || cardElement.classList.contains('matched')) {
+    if (cardElement.classList.contains('flipped')) {
+        console.log('⏸️ 이미 뒤집힌 카드');
+        return;
+    }
+    if (cardElement.classList.contains('matched')) {
+        console.log('⏸️ 이미 매칭된 카드');
         return;
     }
 
     // 카드 뒤집기
+    console.log('✅ 카드 뒤집기:', gameState.cards[index]);
     cardElement.classList.add('flipped');
     gameState.flippedCards.push(index);
 
@@ -162,6 +181,7 @@ function flipCard(index) {
         gameState.attempts++;
         updateStats();
         
+        console.log('🔍 2장 비교 중...');
         setTimeout(() => checkMatch(), 1000);
     }
 }
