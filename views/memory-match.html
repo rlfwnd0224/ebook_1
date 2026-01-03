@@ -117,7 +117,7 @@
 
         .card {
             aspect-ratio: 3/4;
-            background: white;
+            background: transparent;
             border-radius: 10px;
             cursor: pointer;
             position: relative;
@@ -131,7 +131,11 @@
         }
 
         .card.flipped {
-            transform: rotateY(180deg) !important;
+            transform: rotateY(180deg);
+        }
+
+        .card.flipped:hover {
+            transform: rotateY(180deg);
         }
 
         .card.matched {
@@ -150,20 +154,20 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 10px;
+            padding: 15px;
             box-sizing: border-box;
         }
 
         .card-front {
             background: linear-gradient(135deg, #FF6B9D 0%, #FFA500 100%);
             color: white;
-            z-index: 2;
+            transform: rotateY(0deg);
         }
 
         .card-back {
             background: white;
+            border: 2px solid #FFE5EC;
             transform: rotateY(180deg);
-            overflow: hidden;
         }
 
         .card-back .card-text {
@@ -175,22 +179,24 @@
         }
 
         .card-image {
-            width: 80%;
-            height: 60%;
-            object-fit: cover;
+            width: 85%;
+            max-height: 65%;
+            object-fit: contain;
             border-radius: 8px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .card-text {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
             text-align: center;
             word-break: keep-all;
+            line-height: 1.4;
         }
 
         .card-front .card-text {
             font-size: 48px;
+            color: white;
         }
 
         .game-controls {
