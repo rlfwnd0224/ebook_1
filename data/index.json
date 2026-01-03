@@ -105,7 +105,22 @@
       "isPublished": true,
       "createdAt": "2025-12-16",
       "updatedAt": "2025-12-16"
+    },
+    {
+      "id": "story-008",
+      "title": "타임키즈_세종대왕",
+      "author": "김길중",
+      "coverImageUrl": "https://i.ibb.co/XxGPtnXV/01.png",
+      "ageGroup": "5-7세",
+      "tags": [
+        "우정",
+        "모험"
+      ],
+      "pageCount": 30,
+      "isPublished": true,
+      "createdAt": "2026-01-03",
+      "updatedAt": "2026-01-03"
     }
   ],
-  "lastUpdated": "2025-12-16T10:01:03.901Z"
+  "lastUpdated": "2026-01-03T18:06:09.945Z"
 }

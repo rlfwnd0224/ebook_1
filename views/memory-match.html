@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🃏 단어 카드 매칭 게임</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #FFF9F0 0%, #FFE5EC 100%);
+            min-height: 100vh;
+        }
+
+        .game-container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .game-header {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .game-title {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .game-title h1 {
+            color: #FF6B9D;
+            font-size: 28px;
+            margin: 0;
+        }
+
+        .game-stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .stat-item {
+            background: #FFF9F0;
+            padding: 15px 25px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #FF6B9D;
+        }
+
+        .difficulty-selector {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .difficulty-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .difficulty-btn {
+            padding: 10px 20px;
+            border: 2px solid #FF6B9D;
+            background: white;
+            color: #FF6B9D;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .difficulty-btn:hover {
+            background: #FF6B9D;
+            color: white;
+        }
+
+        .difficulty-btn.active {
+            background: #FF6B9D;
+            color: white;
+        }
+
+        .card-grid {
+            display: grid;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .card-grid.easy {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .card-grid.medium {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .card-grid.hard {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .card {
+            aspect-ratio: 3/4;
+            background: white;
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .card.matched {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .card-front {
+            background: linear-gradient(135deg, #FF6B9D 0%, #FFA500 100%);
+            color: white;
+        }
+
+        .card-back {
+            background: white;
+            transform: rotateY(180deg);
+        }
+
+        .card-image {
+            width: 80%;
+            height: 60%;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+            word-break: keep-all;
+        }
+
+        .card-front .card-text {
+            font-size: 48px;
+        }
+
+        .game-controls {
+            text-align: center;
+        }
+
+        .control-btn {
+            background: linear-gradient(135deg, #FF6B9D 0%, #FFA500 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .control-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 107, 157, 0.4);
+        }
+
+        .control-btn.secondary {
+            background: white;
+            color: #FF6B9D;
+            border: 2px solid #FF6B9D;
+        }
+
+        .control-btn.secondary:hover {
+            background: #FF6B9D;
+            color: white;
+        }
+
+        /* 게임 완료 모달 */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.show {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            text-align: center;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-content h2 {
+            color: #FF6B9D;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .result-stars {
+            font-size: 48px;
+            margin: 20px 0;
+        }
+
+        .result-stats {
+            background: #FFF9F0;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .result-stat {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #FFE5EC;
+        }
+
+        .result-stat:last-child {
+            border-bottom: none;
+        }
+
+        .medal {
+            font-size: 64px;
+            margin: 20px 0;
+        }
+
+        /* 모바일 반응형 */
+        @media (max-width: 768px) {
+            .game-container {
+                padding: 10px;
+            }
+
+            .game-title h1 {
+                font-size: 22px;
+            }
+
+            .stat-item {
+                padding: 10px 15px;
+            }
+
+            .stat-value {
+                font-size: 20px;
+            }
+
+            .card-grid.easy,
+            .card-grid.medium,
+            .card-grid.hard {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 8px;
+            }
+
+            .card-text {
+                font-size: 14px;
+            }
+
+            .card-front .card-text {
+                font-size: 36px;
+            }
+
+            .modal-content {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+
+            .modal-content h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <div class="game-title">
+                <h1>🃏 단어 카드 매칭 게임</h1>
+                <p id="storyTitle" style="color: #666;">동화책: 로딩 중...</p>
+            </div>
+            <div class="game-stats">
+                <div class="stat-item">
+                    <div class="stat-label">⏱️ 시간</div>
+                    <div class="stat-value" id="timer">0:00</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">⭐ 점수</div>
+                    <div class="stat-value" id="score">0 / 8</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">🔄 시도</div>
+                    <div class="stat-value" id="attempts">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="difficulty-selector" id="difficultySelector">
+            <h3 style="color: #FF6B9D; margin-bottom: 15px;">난이도를 선택하세요</h3>
+            <div class="difficulty-buttons">
+                <button class="difficulty-btn active" onclick="selectDifficulty('easy')">
+                    🐢 쉬움 (4쌍)
+                </button>
+                <button class="difficulty-btn" onclick="selectDifficulty('medium')">
+                    🐰 보통 (6쌍)
+                </button>
+                <button class="difficulty-btn" onclick="selectDifficulty('hard')">
+                    🐆 어려움 (8쌍)
+                </button>
+            </div>
+            <button class="control-btn" style="margin-top: 20px;" onclick="startGame()">
+                🎮 게임 시작하기
+            </button>
+        </div>
+
+        <div class="card-grid" id="cardGrid" style="display: none;"></div>
+
+        <div class="game-controls" id="gameControls" style="display: none;">
+            <button class="control-btn" onclick="resetGame()">🔄 다시 시작</button>
+            <button class="control-btn secondary" onclick="goBack()">← 게임 선택으로</button>
+        </div>
+    </div>
+
+    <!-- 게임 완료 모달 -->
+    <div class="modal" id="resultModal">
+        <div class="modal-content">
+            <h2>🎉 축하합니다!</h2>
+            <p style="font-size: 18px; color: #666;">게임을 완료했어요!</p>
+            
+            <div class="result-stars" id="resultStars">⭐⭐⭐</div>
+            <div class="medal" id="resultMedal">🥇</div>
+
+            <div class="result-stats">
+                <div class="result-stat">
+                    <span>⏱️ 소요 시간</span>
+                    <strong id="finalTime">0:00</strong>
+                </div>
+                <div class="result-stat">
+                    <span>🔄 시도 횟수</span>
+                    <strong id="finalAttempts">0</strong>
+                </div>
+                <div class="result-stat">
+                    <span>💯 점수</span>
+                    <strong id="finalScore">100점</strong>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <button class="control-btn" onclick="resetGame()">🔄 다시 하기</button>
+                <button class="control-btn secondary" onclick="goBack()">📚 게임 선택으로</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/memory-match.js"></script>
+</body>
+</html>

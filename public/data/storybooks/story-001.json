@@ -219,5 +219,55 @@
     "totalPages": 20,
     "estimatedReadTime": "0분",
     "difficulty": "쉬움"
-  }
+  },
+  "learningWords": [
+    {
+      "word": "왕비",
+      "meaning": "왕의 아내",
+      "example": "새로운 왕비가 궁전에 도착했어요.",
+      "imageUrl": "https://i.ibb.co/Qjh5w03L/2-1.jpg"
+    },
+    {
+      "word": "거울",
+      "meaning": "자신의 모습을 비춰볼 수 있는 물건",
+      "example": "왕비는 마법 거울에게 물어봤어요.",
+      "imageUrl": "https://i.ibb.co/mVsHz0wC/2-2.jpg"
+    },
+    {
+      "word": "사과",
+      "meaning": "빨갛고 둥근 과일",
+      "example": "왕비가 백설공주에게 사과를 주었어요.",
+      "imageUrl": "https://i.ibb.co/RKpJ93m/0.jpg"
+    },
+    {
+      "word": "난쟁이",
+      "meaning": "키가 작은 사람",
+      "example": "일곱 난쟁이가 숲 속에 살고 있었어요.",
+      "imageUrl": "https://i.ibb.co/fz1CFJX6/1-1.jpg"
+    },
+    {
+      "word": "독약",
+      "meaning": "몸에 해로운 약",
+      "example": "마녀가 사과에 독약을 발랐어요.",
+      "imageUrl": "https://i.ibb.co/gMvrL3tQ/1-2.jpg"
+    },
+    {
+      "word": "숲",
+      "meaning": "나무가 많이 자라는 곳",
+      "example": "백설공주는 깊은 숲으로 도망쳤어요.",
+      "imageUrl": "https://i.ibb.co/Qjh5w03L/2-1.jpg"
+    },
+    {
+      "word": "성",
+      "meaning": "왕과 공주가 사는 큰 집",
+      "example": "왕자님이 성에서 백설공주를 구했어요.",
+      "imageUrl": "https://i.ibb.co/mVsHz0wC/2-2.jpg"
+    },
+    {
+      "word": "마법",
+      "meaning": "신비한 힘",
+      "example": "마녀는 마법을 사용할 수 있었어요.",
+      "imageUrl": "https://i.ibb.co/RKpJ93m/0.jpg"
+    }
+  ]
 }

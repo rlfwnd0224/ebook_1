@@ -69,6 +69,16 @@ app.get('/admin', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'admin.html'));
 });
 
+// 게임 선택 페이지
+app.get('/games', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'games.html'));
+});
+
+// 단어 카드 매칭 게임
+app.get('/games/memory-match', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'memory-match.html'));
+});
+
 // API: 전체 동화책 목록 조회
 app.get('/api/storybooks', async (req, res) => {
   try {

@@ -1,0 +1,323 @@
+{
+  "id": "story-008",
+  "title": "타임키즈_세종대왕",
+  "author": "김길중",
+  "coverImageUrl": "https://i.ibb.co/XxGPtnXV/01.png",
+  "ageGroup": "5-7세",
+  "tags": [
+    "우정",
+    "모험"
+  ],
+  "pageCount": 30,
+  "isPublished": true,
+  "createdAt": "2026-01-03",
+  "updatedAt": "2026-01-03",
+  "description": "",
+  "pages": [
+    {
+      "pageNumber": 1,
+      "imageUrl": "https://i.ibb.co/svvpgMRX/03.png",
+      "text": "어느 따뜻한 오후, 현우와 소피아, 타오는 학교 도서관에서 숙제를 하고 있었어요.\n\n\"아... 이 글자 너무 어려워. 왜 이렇게 복잡하게 생겼어?\"\n현우가 공책을 보며 한숨을 쉬었어요.\n\n\"이건 한자야. 옛날 사람들은 이런 글자를 써서 너무 힘들었대.\"\n소피아가 설명해주었어요.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 2,
+      "imageUrl": "https://i.ibb.co/FbSR47cm/04.png",
+      "text": "\"그럼 한글은 누가 만들었어?\" 타오가 물었어요.\n\n\"세종대왕이 만들었대! 그런데... 왜 만들었는지는 잘 모르겠어.\"\n\n현우가 벌떡 일어났어요.\n\"그럼 크로노 할아버지한테 물어보러 가자! 할아버지는 뭐든지 알고 계시잖아!\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 3,
+      "imageUrl": "https://i.ibb.co/xqxmgj3F/05.png",
+      "text": "세 아이는 골목 끝에 있는 신비한 가게로 향했어요.\n\"크로노의 골동품 가게\"\n\n낡은 나무 간판이 바람에 흔들리고,\n창문 너머로 수많은 시계들이 반짝이고 있었어요.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 4,
+      "imageUrl": "https://i.ibb.co/YB6qr77r/06.png",
+      "text": "딸랑딸랑!\n\n문을 열자 종소리가 울렸어요.\n가게 안은 신비로운 물건들로 가득했어요.\n\n할아버지 시계, 지구본, 나침반,\n세계 각국의 유물들이 선반마다 놓여 있었어요.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 5,
+      "imageUrl": "https://i.ibb.co/d4X4NyRn/07.png",
+      "text": "\"오오, 우리 타임키즈가 왔구나!\"\n크로노 할아버지가 환하게 웃으며 맞아주셨어요.\n\n\"할아버지! 한글에 대해 알고 싶어요!\"\n\"세종대왕이 왜 한글을 만들었는지 궁금해요.\"\n\n할아버지의 눈이 반짝였어요.\n\"직접 보고 오는 게 어떨까?\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 6,
+      "imageUrl": "https://i.ibb.co/Txhy3s0n/08.png",
+      "text": "할아버지는 서랍에서 아름다운 황금 회중시계를 꺼내셨어요.\n그것은 타임워치였어요!\n\n복잡한 문양과 신비한 보석들이 박혀 있었고,\n여러 개의 바늘이 신비롭게 움직이고 있었어요.\n\n\"세종대왕께서 한글을 만들던 1443년으로 가보자꾸나.\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 7,
+      "imageUrl": "https://i.ibb.co/RGKRvHB3/09.png",
+      "text": "\"오늘의 미션은 '왕의 마음을 이해하라'란다.\"\n할아버지가 두루마리를 펼쳐 보여주셨어요.\n\n\"자, 타임워치를 함께 잡으렴.\n역사의 시간으로, 떠나라!\"\n\n째깍째깍째깍!\n시계 소리가 점점 빨라졌어요.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 8,
+      "imageUrl": "https://i.ibb.co/NnV0Lx17/10.png",
+      "text": "황금빛 소용돌이가 아이들을 감쌌어요.\n\n시계 톱니바퀴들이 빙글빙글 돌아가고,\n숫자들이 거꾸로 흘러갔어요.\n\n2024... 2000... 1800... 1443!",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 9,
+      "imageUrl": "https://i.ibb.co/TM4ZZjQj/11.png",
+      "text": "쏴아아... 쿵!\n\n눈을 떠보니 완전히 다른 세상이었어요.\n\n\"우와! 우리 옷 좀 봐!\"\n타오가 소리쳤어요.\n\n아이들은 어느새 조선시대 한복으로 갈아입고 있었어요.\n띡띡이도 귀여운 버들고리로 변해 있었어요!",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 10,
+      "imageUrl": "https://i.ibb.co/GfsKHK9v/12.png",
+      "text": "\"여기가 조선시대구나... 신기해!\"\n\n눈앞에는 기와집과 초가집들이 늘어서 있었어요.\n저잣거리에는 사람들이 바쁘게 오가고 있었고,\n상인들의 외치는 소리가 시끌벅적했어요.\n\n\"여기 좋은 비단이오!\"\n\"신선한 과일! 과일 사시오!\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 11,
+      "imageUrl": "https://i.ibb.co/wFPMXs0R/13.png",
+      "text": "그때, 한쪽 구석에서 우는 소리가 들렸어요.\n\n한 소녀가 양반 앞에서 애원하고 있었어요.\n\n\"나리, 부디 제 아버지께 편지 좀 써주세요.\n아버지가 병이 나셨는데...\"\n\n\"흥! 천민 주제에 감히!\n네 주제에 글이라니! 물러가거라!\"\n\n양반은 차갑게 거절하고 떠나버렸어요.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 12,
+      "imageUrl": "https://i.ibb.co/HTPdQdty/14.png",
+      "text": "소녀는 길가에 주저앉아 눈물을 흘렸어요.\n\n\"저 아이... 너무 불쌍해.\"\n소피아가 말했어요.\n\n\"우리가 도와줄 수 있을까?\"\n타오가 걱정스럽게 물었어요.\n\n\"도와줘야지!\"\n현우가 결심했어요.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 13,
+      "imageUrl": "https://i.ibb.co/k6MGL8MQ/15.png",
+      "text": "아이들은 소녀에게 다가갔어요.\n\n\"왜 울어? 무슨 일이야?\"\n\n\"제 이름은 꽃분이예요.\n우리 아버지가 전라도로 일하러 가셨는데 병이 나셨대요.\n편지를 보내야 하는데...\n나도, 우리 어머니도 글을 몰라요.\n양반들한테 부탁하려 해도 돈이 많이 들거나 무시당해요.\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 14,
+      "imageUrl": "https://i.ibb.co/SDrV9V68/16.png",
+      "text": "아이들은 꽃분이와 함께 거리를 걸었어요.\n\n그러다 관청 앞에서 또 다른 장면을 보게 되었어요.\n\n한 노인이 호소하고 있었어요.\n\"억울합니다! 제 땅을 빼앗겼습니다!\"\n\n\"문서를 가져오시오. 증거가 있소?\"\n관리가 물었어요.\n\n\"글을 몰라... 문서를 만들지 못했습니다...\"\n\"그럼 어쩔 수 없소. 물러가시오.\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 15,
+      "imageUrl": "https://i.ibb.co/DD8DhkpB/17.png",
+      "text": "\"글을 모르면 억울한 일을 당해도 말도 못 하는구나...\"\n타오가 속삭였어요.\n\n\"그래서... 우리 같은 백성들은 평생 누군가에게 부탁하며 살아야 해요.\"\n꽃분이가 슬프게 말했어요.\n\n\"이게 바로 세종대왕님이 보신 거구나...\"\n소피아가 깨달았어요.\n\n\"우리가 대왕님을 만나야 해!\"\n현우가 말했어요.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 16,
+      "imageUrl": "https://i.ibb.co/qLdqhDyw/18.png",
+      "text": "아이들은 경복궁 후원으로 들어갔어요.\n\n아름다운 연못과 정자가 있었고,\n석양빛이 평화롭게 비치고 있었어요.\n\n그곳에서 한 분이 홀로 연못가에 앉아\n깊은 생각에 잠겨 계셨어요.\n\n바로 세종대왕이셨어요!",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 17,
+      "imageUrl": "https://i.ibb.co/SqW4yx2/19.png",
+      "text": "\"백성들이 말하고자 하는 바를\n글로 표현하지 못한다면...\"\n세종대왕께서 혼잣말을 하고 계셨어요.\n\n그때 타오가 발을 헛디뎠어요.\n\"앗!\"\n덜컹!\n\n세종대왕께서 돌아보셨어요.\n\"누구냐?\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 18,
+      "imageUrl": "https://i.ibb.co/4gpL8RDq/20.png",
+      "text": "\"저, 저희는...\"\n아이들은 어색하게 나왔어요.\n\n세종대왕은 놀라시기보다 부드럽게 미소 지으셨어요.\n\n\"어린것들이 어찌 궁궐에 들어왔느냐?\n그래, 말해보거라.\"\n\n세종대왕께서 손짓으로 가까이 오라고 하셨어요.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 19,
+      "imageUrl": "https://i.ibb.co/3bg8xGp/21.png",
+      "text": "현우가 꽃분이를 앞으로 나오게 했어요.\n\n\"전하, 이 아이는 꽃분이라고 합니다.\"\n\n꽃분이는 떨리는 목소리로 말했어요.\n\"전하... 저는 글을 배울 수가 없습니다.\n제 마음을, 어머니의 마음을\n아버지께 전할 방법이 없습니다.\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 20,
+      "imageUrl": "https://i.ibb.co/vvcR93rQ/22.png",
+      "text": "세종대왕의 눈빛이 깊어지고 슬퍼졌어요.\n\n\"네 아버지는 어디 계시느냐?\"\n\n\"전라도에서 일하시다가 병이 나셨습니다.\"\n\n\"그래... 네가 전하고 싶은 말이 무엇이냐?\"\n\n\"약을 보냈으니 어서 드시고 나으시라고...\n그리고 저희가 많이 보고 싶다고 전하고 싶습니다.\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 21,
+      "imageUrl": "https://i.ibb.co/gH4KcJt/23.png",
+      "text": "\"내가... 내가 임금으로서\n이런 일을 막지 못했구나.\"\n\n세종대왕께서 일어나시며 말씀하셨어요.\n\n\"나를 따라오너라. 보여줄 것이 있다.\"\n\n달이 뜬 밤, 아이들은 세종대왕을 따라\n집현전으로 갔어요.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 22,
+      "imageUrl": "https://i.ibb.co/bgP2J2Tq/24.png",
+      "text": "집현전에는 커다란 책상이 있었고,\n그 위에 수많은 종이들이 놓여 있었어요.\n\n촛불이 여러 개 타고 있었고,\n벽에는 각종 연구 자료들이 가득했어요.\n\n\"이것을 보거라.\"\n세종대왕께서 한 장의 종이를 펼치셨어요.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 23,
+      "imageUrl": "https://i.ibb.co/N2JMps2T/25.png",
+      "text": "종이 위에는 신기한 글자들이 적혀 있었어요.\n\nㄱ, ㄴ, ㄷ, ㄹ, ㅁ, ㅂ...\nㅏ, ㅑ, ㅓ, ㅕ, ㅗ, ㅛ...\n\n\"우와...\"\n타오가 감탄했어요.\n\n\"나는 이 문자를 만들고 있다.\n배우기 쉽고, 쓰기 편하고,\n백성 누구나 사용할 수 있는 문자를.\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 24,
+      "imageUrl": "https://i.ibb.co/7JCZZ2nj/26.png",
+      "text": "세종대왕께서 설명해주셨어요.\n\n\"ㄱ, ㄴ, ㄷ...\n이 소리들을 조합하면\n우리가 말하는 모든 소리를 적을 수 있단다.\"\n\n\"하지만 전하... 저 같은 천민도 배울 수 있을까요?\"\n꽃분이가 조심스럽게 물었어요.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 25,
+      "imageUrl": "https://i.ibb.co/gZtdsY2X/27.png",
+      "text": "세종대왕께서 꽃분이의 손을 잡아\n종이 위에 올려놓으셨어요.\n\n\"그래, 너도 배울 수 있다.\n아니, 너를 위해 만드는 것이다.\n양반만이 아니라\n모든 백성이 자신의 생각을 표현할 수 있어야 한다.\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 26,
+      "imageUrl": "https://i.ibb.co/TqJ6hzWc/28.png",
+      "text": "세종대왕께서 창밖을 바라보시며 말씀하셨어요.\n\n\"한자는 우리말과 다르고, 배우기 어렵다.\n그래서 많은 백성들이 글을 모르고,\n억울한 일을 당한다.\n\n임금이란 백성을 편안하게 해야 하는 것이 아니겠느냐?\n백성의 아픔이 나의 아픔이요,\n백성의 기쁨이 나의 기쁨이다.\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 27,
+      "imageUrl": "https://i.ibb.co/zWLx1q3S/29.png",
+      "text": "세종대왕께서 붓을 들어 한자로 편지를 써주셨어요.\n\n\"오늘은 내가 대신 써주마.\n하지만 이것을 보거라.\"\n\n그리고 새 종이에 한글로 \"아버지\"라고 쓰셨어요.\n\n\"ㅏ-ㅂ-ㅓ-ㅈ-ㅣ... 아버지.\n이 종이를 잘 간직하거라.\n몇 년 후, 이 문자가 완성되면\n네가 첫 번째 학생이 되어주겠느냐?\"\n\n\"네! 꼭 배우겠습니다!\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 28,
+      "imageUrl": "https://i.ibb.co/kgKCCTSw/30.png",
+      "text": "그때, 띡띡이가 빛나기 시작했어요.\n\"띠링띠링!\"\n\n\"이제 돌아가야 할 시간이야.\"\n\n\"전하, 전하의 마음을 이해했습니다.\"\n소피아가 절을 했어요.\n\n\"안녕히 계세요! 꽃분이도 열심히 공부해!\"\n\n황금빛 소용돌이가 다시 아이들을 감쌌어요.",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 29,
+      "imageUrl": "https://i.ibb.co/9H78rYDp/31.png",
+      "text": "쏴아아...\n\n아이들은 다시 크로노 할아버지의 가게로 돌아왔어요.\n\n\"잘 돌아왔구나! 미션을 완수했네.\"\n할아버지께서 박수를 쳐주셨어요.\n\n\"할아버지! 세종대왕님을 직접 뵀어요!\"\n\"한글이 만들어지는 걸 봤어요!\"\n\n\"1446년, 훈민정음이 반포되고 나서\n많은 백성들이 글을 배울 수 있게 되었단다.\n꽃분이 같은 아이들도 말이지.\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    },
+    {
+      "pageNumber": 30,
+      "imageUrl": "https://i.ibb.co/XrR1LRJd/32.png",
+      "text": "할아버지께서 세 개의 뱃지를 건네주셨어요.\n황금 테두리에 \"ㄱㄴㄷ\"와 하트가 새겨진 아름다운 뱃지였어요.\n\n\"이 뱃지는 '배려와 소통'을 기억하라는 의미란다.\n세종대왕께서 백성을 배려한 마음처럼 말이야.\"\n\n다음 날 학교에서 현우, 소피아, 타오는\n어려워하는 저학년 친구를 도와주었어요.\n\n배려는 상대방의 입장에서 생각하는 것에서 시작돼요.\n여러분도 오늘 누군가를 배려할 수 있나요?\n\n- 끝 -\n\n다음 모험: \"만리장성을 쌓은 사람들\"",
+      "ttsSettings": {
+        "voice": "female",
+        "speed": 1,
+        "autoPlay": true
+      }
+    }
+  ],
+  "metadata": {
+    "totalPages": 30,
+    "estimatedReadTime": "0분",
+    "difficulty": "쉬움"
+  }
+}

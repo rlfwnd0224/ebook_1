@@ -39,9 +39,12 @@
                 <div class="page-indicator">
                     <span id="currentPage">1</span> / <span id="totalPages">1</span>
                 </div>
-                <div style="display: flex; gap: 10px;">
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
                     <button class="btn btn-primary" onclick="toggleAutoPlay()">
                         <span id="autoPlayIcon">▶️</span> 자동 읽기
+                    </button>
+                    <button class="btn" onclick="goToGames()" style="background: linear-gradient(135deg, #FF6B9D 0%, #FFA500 100%); color: white; border: none;">
+                        🎮 학습 게임
                     </button>
                 </div>
             </div>
@@ -350,6 +353,12 @@
 
         // 초기 로드
         loadStory();
+
+        // 학습 게임으로 이동
+        function goToGames() {
+            const storyId = window.location.pathname.split('/').pop();
+            window.location.href = `/games?story=${storyId}`;
+        }
     </script>
 </body>
 </html>
