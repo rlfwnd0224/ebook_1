@@ -9,6 +9,17 @@
 </head>
 <body>
     <div class="container">
+        <!-- Vercel 환경 경고 -->
+        <div id="vercelWarning" style="display: none; background: #FFF3E0; border: 2px solid #FF9800; border-radius: 15px; padding: 20px; margin-bottom: 20px;">
+            <h3 style="color: #F57C00; margin-bottom: 10px;">⚠️ 주의: Vercel 환경 (읽기 전용)</h3>
+            <p style="color: #666; margin: 0; line-height: 1.6;">
+                <strong>Vercel은 읽기 전용 환경</strong>입니다. 동화책을 생성/수정하려면:<br>
+                1. <strong>로컬 개발 서버</strong> 사용: <a href="https://3000-ilu862xeoen3yf8noqf4w-6532622b.e2b.dev/admin" target="_blank" style="color: #FF6B9D; font-weight: bold;">개발 서버 접속</a><br>
+                2. 수정 후 GitHub 푸시 → Vercel 자동 배포<br>
+                3. 또는 <strong>Cloudflare Pages + D1 Database</strong>로 마이그레이션 권장
+            </p>
+        </div>
+
         <div class="admin-header">
             <div>
                 <h1 style="color: #FF6B9D; margin-bottom: 5px;">⚙️ 동화책 관리</h1>
@@ -622,7 +633,16 @@ https://example.com/page-03.jpg"
             }
         }
 
+        // 환경 체크 (Vercel 감지)
+        function checkEnvironment() {
+            const isVercel = window.location.hostname.includes('vercel.app');
+            if (isVercel) {
+                document.getElementById('vercelWarning').style.display = 'block';
+            }
+        }
+
         // 초기 로드
+        checkEnvironment();
         loadStorybooks();
 
         // ========== 학습 단어 관리 ==========

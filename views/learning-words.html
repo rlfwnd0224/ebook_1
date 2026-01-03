@@ -36,6 +36,17 @@
 </head>
 <body>
     <div class="container" style="max-width: 1000px; margin: 40px auto;">
+        <!-- Vercel 환경 경고 -->
+        <div id="vercelWarning" style="display: none; background: #FFF3E0; border: 2px solid #FF9800; border-radius: 15px; padding: 20px; margin-bottom: 20px;">
+            <h3 style="color: #F57C00; margin-bottom: 10px;">⚠️ 주의: Vercel 환경에서는 저장 불가</h3>
+            <p style="color: #666; margin: 0; line-height: 1.6;">
+                <strong>Vercel은 읽기 전용 환경</strong>입니다. 학습 단어를 저장하려면:<br>
+                1. <strong>로컬 개발 서버</strong>에서 수정: <a href="https://3000-ilu862xeoen3yf8noqf4w-6532622b.e2b.dev/admin" target="_blank" style="color: #FF6B9D; font-weight: bold;">개발 서버 접속</a><br>
+                2. GitHub에 푸시하면 Vercel이 자동 배포<br>
+                3. 또는 <strong>Cloudflare Pages</strong>로 마이그레이션 (D1 Database 사용)
+            </p>
+        </div>
+
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
             <div>
                 <h1 style="color: #FF6B9D; margin-bottom: 5px;">🎮 학습 단어 설정</h1>
@@ -120,8 +131,28 @@
             }
         }
 
+        // 환경 체크 (Vercel 감지)
+        function checkEnvironment() {
+            const isVercel = window.location.hostname.includes('vercel.app');
+            if (isVercel) {
+                document.getElementById('vercelWarning').style.display = 'block';
+            }
+        }
+
         // 저장
         async function saveWords() {
+            // Vercel 환경 체크
+            const isVercel = window.location.hostname.includes('vercel.app');
+            if (isVercel) {
+                const confirm = window.confirm(
+                    '⚠️ Vercel 환경에서는 저장이 불가능합니다.\n\n' +
+                    '로컬 개발 서버에서 수정하거나,\n' +
+                    'Cloudflare Pages로 마이그레이션하세요.\n\n' +
+                    '그래도 시도하시겠습니까? (실패할 가능성 높음)'
+                );
+                if (!confirm) return;
+            }
+
             const learningWords = [];
 
             for (let i = 0; i < 8; i++) {
@@ -150,12 +181,15 @@
                     alert('✅ 학습 단어가 저장되었습니다!');
                     window.close();
                 } else {
-                    alert('❌ 저장 실패: ' + result.error);
+                    alert('❌ 저장 실패: ' + result.error + '\n\n로컬 개발 서버를 사용하세요.');
                 }
             } catch (error) {
-                alert('❌ 저장 실패: ' + error.message);
+                alert('❌ 저장 실패: ' + error.message + '\n\n로컬 개발 서버를 사용하세요.');
             }
         }
+
+        // 페이지 로드 시 환경 체크
+        checkEnvironment();
 
         // 페이지 로드 시 실행
         if (storyId) {
