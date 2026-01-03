@@ -162,12 +162,22 @@
             background: linear-gradient(135deg, #FF6B9D 0%, #FFA500 100%);
             color: white;
             transform: rotateY(0deg);
+            z-index: 2;
+        }
+
+        .card.flipped .card-front {
+            z-index: 0;
         }
 
         .card-back {
             background: white;
             border: 2px solid #FFE5EC;
             transform: rotateY(180deg);
+            z-index: 1;
+        }
+
+        .card.flipped .card-back {
+            z-index: 3;
         }
 
         .card-back .card-text {
