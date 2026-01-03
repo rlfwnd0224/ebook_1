@@ -185,6 +185,7 @@ https://example.com/page-03.jpg"
                         <button class="btn btn-secondary" onclick="loadExistingData()">🔄 기존 데이터 불러오기</button>
                         <button class="btn btn-primary" onclick="previewAll()">👁️ 미리보기</button>
                         <button class="btn btn-success" onclick="saveAllPages()">💾 저장하기</button>
+                        <button class="btn" onclick="openLearningWordsModal()" style="background: linear-gradient(135deg, #FF6B9D 0%, #FFA500 100%); color: white; border: none;">🎮 학습 단어 설정</button>
                     </div>
 
                     <!-- 미리보기 영역 -->
@@ -623,6 +624,20 @@ https://example.com/page-03.jpg"
 
         // 초기 로드
         loadStorybooks();
+
+        // ========== 학습 단어 관리 ==========
+        
+        function openLearningWordsModal() {
+            if (!currentEditId) {
+                alert('⚠️ 먼저 동화책을 선택해주세요.');
+                return;
+            }
+
+            const modal = prompt('학습 단어 설정 페이지로 이동하시겠습니까?\n\n입력: /admin/learning-words?story=' + currentEditId);
+            if (modal !== null) {
+                window.open(`/admin/learning-words?story=${currentEditId}`, '_blank');
+            }
+        }
     </script>
 </body>
 </html>

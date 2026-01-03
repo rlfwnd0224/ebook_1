@@ -69,6 +69,11 @@ app.get('/admin', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'admin.html'));
 });
 
+// 학습 단어 설정 페이지
+app.get('/admin/learning-words', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'learning-words.html'));
+});
+
 // 게임 선택 페이지
 app.get('/games', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'games.html'));
@@ -323,6 +328,37 @@ app.post('/api/admin/storybooks/:id/pages/bulk-texts', async (req, res) => {
 });
 
 // 서버 시작
+// API: 학습 단어 저장
+app.put('/api/admin/storybooks/:id/learning-words', async (req, res) => {
+  try {
+    const storyId = req.params.id;
+    const { learningWords } = req.body;
+
+    // 동화책 파일 읽기
+    const story = await readJsonFile(`data/storybooks/${storyId}.json`);
+    
+    // 학습 단어 업데이트
+    story.learningWords = learningWords;
+    story.updatedAt = new Date().toISOString().split('T')[0];
+
+    // 저장
+    await writeJsonFile(`data/storybooks/${storyId}.json`, story);
+
+    // index.json도 업데이트
+    const index = await readJsonFile('data/index.json');
+    const storyIndex = index.storybooks.find(s => s.id === storyId);
+    if (storyIndex) {
+      storyIndex.updatedAt = story.updatedAt;
+    }
+    index.lastUpdated = new Date().toISOString();
+    await writeJsonFile('data/index.json', index);
+
+    res.json({ success: true, message: '학습 단어가 저장되었습니다.' });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`🚀 서버가 http://localhost:${PORT} 에서 실행 중입니다.`);
   console.log(`📚 메인 페이지: http://localhost:${PORT}`);

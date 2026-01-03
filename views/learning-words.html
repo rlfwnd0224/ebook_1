@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 학습 단어 설정</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .word-card {
+            background: white;
+            border: 2px solid #FFE5EC;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .word-card h4 {
+            color: #FF6B9D;
+            margin-bottom: 15px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="max-width: 1000px; margin: 40px auto;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+            <div>
+                <h1 style="color: #FF6B9D; margin-bottom: 5px;">🎮 학습 단어 설정</h1>
+                <p id="storyTitle" style="color: #666; margin: 0;">동화책: 로딩 중...</p>
+            </div>
+            <button class="btn btn-secondary" onclick="window.close()">← 닫기</button>
+        </div>
+
+        <div style="background: #FFF9F0; padding: 20px; border-radius: 15px; margin-bottom: 30px;">
+            <h3 style="color: #FFA500; margin-bottom: 10px;">💡 학습 단어란?</h3>
+            <p style="color: #666; margin: 0; line-height: 1.6;">
+                동화책에서 아이들이 배울 수 있는 <strong>8개의 단어</strong>를 입력하세요.<br>
+                각 단어마다 <strong>뜻</strong>, <strong>예문</strong>, <strong>이미지 URL</strong>을 함께 설정할 수 있습니다.<br>
+                이 단어들은 <strong>단어 카드 매칭 게임</strong>에서 사용됩니다.
+            </p>
+        </div>
+
+        <div id="wordsContainer">
+            <!-- JavaScript로 8개 단어 폼 생성 -->
+        </div>
+
+        <div style="display: flex; gap: 10px; justify-content: center; margin-top: 30px;">
+            <button class="btn btn-secondary" onclick="window.close()">취소</button>
+            <button class="btn btn-success" onclick="saveWords()" style="padding: 15px 40px; font-size: 18px;">💾 저장하기</button>
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const storyId = urlParams.get('story');
+        let storyData = null;
+
+        // 동화책 데이터 로드
+        async function loadStory() {
+            try {
+                const response = await fetch(`/api/storybooks/${storyId}`);
+                storyData = await response.json();
+                
+                document.getElementById('storyTitle').textContent = `동화책: ${storyData.title}`;
+                
+                // 8개 단어 폼 생성
+                renderWordForms();
+            } catch (error) {
+                alert('❌ 동화책 정보를 불러올 수 없습니다.');
+                console.error(error);
+            }
+        }
+
+        // 8개 단어 입력 폼 렌더링
+        function renderWordForms() {
+            const container = document.getElementById('wordsContainer');
+            const existingWords = storyData.learningWords || [];
+
+            for (let i = 0; i < 8; i++) {
+                const word = existingWords[i] || { word: '', meaning: '', example: '', imageUrl: '' };
+                
+                const card = document.createElement('div');
+                card.className = 'word-card';
+                card.innerHTML = `
+                    <h4>단어 ${i + 1}</h4>
+                    <div class="form-row">
+                        <div class="form-group" style="margin: 0;">
+                            <label>단어 *</label>
+                            <input type="text" class="form-control" id="word${i}" value="${word.word}" placeholder="예: 왕비" required>
+                        </div>
+                        <div class="form-group" style="margin: 0;">
+                            <label>뜻 *</label>
+                            <input type="text" class="form-control" id="meaning${i}" value="${word.meaning}" placeholder="예: 왕의 아내" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>예문</label>
+                        <input type="text" class="form-control" id="example${i}" value="${word.example}" placeholder="예: 새로운 왕비가 궁전에 도착했어요.">
+                    </div>
+                    <div class="form-group">
+                        <label>이미지 URL *</label>
+                        <input type="url" class="form-control" id="imageUrl${i}" value="${word.imageUrl}" placeholder="https://i.ibb.co/..." required>
+                        ${word.imageUrl ? `<img src="${word.imageUrl}" style="max-width: 200px; margin-top: 10px; border-radius: 8px;" onerror="this.style.display='none'">` : ''}
+                    </div>
+                `;
+                container.appendChild(card);
+            }
+        }
+
+        // 저장
+        async function saveWords() {
+            const learningWords = [];
+
+            for (let i = 0; i < 8; i++) {
+                const word = document.getElementById(`word${i}`).value.trim();
+                const meaning = document.getElementById(`meaning${i}`).value.trim();
+                const example = document.getElementById(`example${i}`).value.trim();
+                const imageUrl = document.getElementById(`imageUrl${i}`).value.trim();
+
+                if (!word || !meaning || !imageUrl) {
+                    alert(`⚠️ 단어 ${i + 1}의 필수 항목을 모두 입력해주세요.\n(단어, 뜻, 이미지 URL)`);
+                    return;
+                }
+
+                learningWords.push({ word, meaning, example, imageUrl });
+            }
+
+            try {
+                const response = await fetch(`/api/admin/storybooks/${storyId}/learning-words`, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ learningWords })
+                });
+
+                const result = await response.json();
+                if (result.success) {
+                    alert('✅ 학습 단어가 저장되었습니다!');
+                    window.close();
+                } else {
+                    alert('❌ 저장 실패: ' + result.error);
+                }
+            } catch (error) {
+                alert('❌ 저장 실패: ' + error.message);
+            }
+        }
+
+        // 페이지 로드 시 실행
+        if (storyId) {
+            loadStory();
+        } else {
+            alert('❌ 동화책 ID가 없습니다.');
+            window.close();
+        }
+    </script>
+</body>
+</html>
